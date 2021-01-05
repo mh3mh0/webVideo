@@ -1,6 +1,7 @@
 :root{
     --red: #e50914;
     --background: #e7dbdb;
+    --font-color:#7a6868;
 }
 
 *{
@@ -39,3 +40,13 @@ header nav a:hover,
 header nav a.active{
     color: #FFF;
 }
+
+/* ---- ---- ---- ---- principal-movie ---- ---- ---- ---- */
+.principal-movie{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: var(--font-color);
+    background: url(./imgs/backdrop.jpg);
+}
+
+
