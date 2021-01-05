@@ -1,7 +1,7 @@
 :root{
     --red: #e50914;
-    --background: #e7dbdb;
-    --font-color:#7a6868;
+    --background: #363535;
+    --font-color:#fffefe;
 }
 
 *{
@@ -31,10 +31,15 @@ header .logo{
      color: var(--red);
      font-size: 40px;
 }
-header nav a{
-    color: #7a6868;
+header .nav ul{
     text-decoration: none;
-    margin-left: 30px;
+    list-style: none;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+}
+header .nav li{
+    margin: 0 .75rem;
 }
 header nav a:hover,
 header nav a.active{
@@ -46,7 +51,16 @@ header nav a.active{
     font-size: 16px;
     min-height: 40.62em;
     color: var(--font-color);
-    background: url(./imgs/backdrop.jpg);
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%), url(../imgs/backdrop.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: flex-end;
+}
+.principal-movie .container{
+    margin: 0 auto;
+    margin-bottom: 6.25em;
 }
 
 
