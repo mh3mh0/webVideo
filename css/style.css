@@ -52,7 +52,7 @@ header nav a.active{
 }
 
 /* ---- ---- ---- ---- principal-movie ---- ---- ---- ---- */
-.principal-movie{
+.principal-movies{
     font-size: 16px;
     min-height: 40.62em;
     color: var(--font-color);
@@ -63,23 +63,23 @@ header nav a.active{
     display: flex;
     align-items: flex-end;
 }
-.principal-movie .container{
+.principal-movies .container{
     margin: 0 auto;
     margin-bottom: 6.25em;
 }
-.principal-movie .title{
+.principal-movies .title{
     font-weight: 600;
     font-size: 3.12em;
     margin-bottom: 0.4em;
 }
-.principal-movie .descripton{
+.principal-movies .descripton p{
     font-weight: normal;
     font-size: 1em;
-    line-height: 1.75em;
+    line-height: 1.90em;
     max-width: 50%;
     margin-bottom: 1.25em;
 }
-.principal-movie .button{
+.principal-movies .button{
     background: rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 0.31em;
@@ -91,11 +91,11 @@ header nav a.active{
     transition: .3s ease all;
     font-size: 1.12em;
 }
-.principal-movie .button:hover{
+.principal-movies .button:hover{
     background: var(--font-color);
     color: #000;
 }
-.principal-movie .button i{
+.principal-movies .button i{
     margin-right: 1.25em;
 }
 
@@ -109,10 +109,10 @@ header nav a.active{
         flex-direction: column;
         text-align: center;
     }
-    .principal-movie{
+    .principal-movies{
         font-size: 14px;
     }
-    .principal-movie .descripton{
+    .principal-movies .descripton{
         max-width: 100px;
     }
 }
