@@ -62,5 +62,55 @@ header nav a.active{
     margin: 0 auto;
     margin-bottom: 6.25em;
 }
+.principal-movie .title{
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+.principal-movie .descripton{
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25;
+}
+.principal-movie .button{
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: #FFF;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.12em;
+}
+.principal-movie .button:hover{
+    background: var(--font-color);
+    color: #000;
+}
+.principal-movie .button i{
+    margin-right: 1.25em;
+}
+
+/* ---- ---- ---- ---- Media Queries  ---- ---- ---- ---- */
+@media screen and (max-width: 600px){
+    header .logo{
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+    header .container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .principal-movie{
+        font-size: 14px;
+    }
+    .principal-movie .descripton{
+        max-width: 100px;
+    }
+}
+
+
 
 
