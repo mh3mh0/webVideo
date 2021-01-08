@@ -206,21 +206,3 @@ main{
     width: 100%;
     vertical-align: top;
 }
-
-
-/* ---- ---- ---- ---- Media Queries  ---- ---- ---- ---- */
-/*@media screen and (max-width: 800px){
-    header .logo{
-        font-size: 30px;
-    }
-    header .container{
-        flex-direction: column;
-        text-align: center;
-    }
-    .principal-movie{
-        font-size: 14px;
-    }
-    .principal-movie .descripton{
-        max-width: 100px;
-    }
-}*/
