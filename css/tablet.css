@@ -1,0 +1,27 @@
+header .logo{
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+header .container{
+    flex-direction: column;
+    text-align: center;
+}
+.main-movie{
+    font-size: 14px;
+}
+.main-movie .main-description{
+    max-width: 100%;
+}
+.principal-container .carrousel-container{
+    overflow: visible;
+}
+.principal-container .carrousel-container .carrousel{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.recommended-movies .pointMark,
+.recommended-movies .left-arrow,
+.recommended-movies .right-arrow{
+    display: none;
+}

@@ -124,17 +124,17 @@ main{
     margin-right: 1.25em;
 }
 
-/* ---- ---- ---- ---- Title container and controls-directions ---- ---- ---- ---- */
+/* ---- ---- ---- ---- Title container and controls-pointmark ---- ---- ---- ---- */
 .container-title-controls{
     display: flex;
     justify-content: space-between;
-    align-items:flex-end;
+    align-items: flex-end;
 }
 .container-title-controls h3{
     color: var(--font-color);
     font-size: 30px;
 }
-.container-title-controls .directions button{
+.container-title-controls .pointmark button{
     background: var(--font-color);
     height: 3px;
     width: 10px;
@@ -142,13 +142,13 @@ main{
     border: none;
     margin-right: 2px;
 }
-.container-title-controls .directions button:hover,
-.container-title-controls .directions button.active{
+.container-title-controls .pointmark button:hover,
+.container-title-controls .pointmark button.active{
     background: var(--red);
 }
 
 /* ---- ---- ---- ---- Main container and arrows ---- ---- ---- ---- */
-.recomended-movies .container{
+.recommended-movies .container{
     margin-bottom: 70px;
 }
 .principal-container{
@@ -209,7 +209,7 @@ main{
 
 
 /* ---- ---- ---- ---- Media Queries  ---- ---- ---- ---- */
-@media screen and (max-width: 800px){
+/*@media screen and (max-width: 800px){
     header .logo{
         font-size: 30px;
     }
@@ -223,17 +223,4 @@ main{
     .principal-movie .descripton{
         max-width: 100px;
     }
-}
-.recomended-movies .carrousel-container{
-    overflow: visible;
-}
-.carrousel-container .carrousel{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-.recomended-movies .directions,
-.recomended-movies .left-arrow, 
-.recomended-movies .right-arrow{
-    display: none;
-}
+}*/
