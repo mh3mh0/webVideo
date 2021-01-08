@@ -124,17 +124,17 @@ main{
     margin-right: 1.25em;
 }
 
-/* ---- ---- ---- ---- Title container and controls-directions ---- ---- ---- ---- */
+/* ---- ---- ---- ---- Title container and controls-pointmark ---- ---- ---- ---- */
 .container-title-controls{
     display: flex;
     justify-content: space-between;
-    align-items:flex-end;
+    align-items: flex-end;
 }
 .container-title-controls h3{
     color: var(--font-color);
     font-size: 30px;
 }
-.container-title-controls .directions button{
+.container-title-controls .pointmark button{
     background: var(--font-color);
     height: 3px;
     width: 10px;
@@ -142,13 +142,18 @@ main{
     border: none;
     margin-right: 2px;
 }
-.container-title-controls .directions button:hover,
-.container-title-controls .directions button.active{
+.container-title-controls .pointmark button:hover,
+.container-title-controls .pointmark button.active{
     background: var(--red);
 }
 
-/* ---- ---- ---- ---- Main container and arrows ---- ---- ---- ---- */
-.recomended-movies .container{
+/* ---- ---- ---- ---- Main container of movies, arrows and carrousel ---- ---- ---- ---- */
+.contenedor-principal{
+    width: 90%;
+    margin: auto;
+}
+
+.recomended-movies-container{
     margin-bottom: 70px;
 }
 .principal-container{
@@ -183,26 +188,26 @@ main{
 }
 
 /* ---- ---- ---- ---- Carrousel ---- ---- ---- ---- */
-.carrousel-container{
+.peliculas-recomendadas .contenedor-carrusel{
     width: 100%;
     padding: 20px 0;
     overflow: hidden;
     scroll-behavior: smooth;
 }
-.carrousel-container .carrousel{
+.peliculas-recomendadas .contenedor-carrusel .carrusel{
     display: flex;
     flex-wrap: nowrap;
 }
-.movie{
+.peliculas-recomendadas .contenedor-carrusel .carrusel .movie{
     min-width: 20%;
     transition: .3s ease all;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .4);
 }
-.movie.hover{
+.peliculas-recomendadas .contenedor-carrusel .carrusel .movie.hover{
     transform: scale(1.2);
     transform-origin: center;
 }
-.movie img{
+.peliculas-recomendadas .contenedor-carrusel .carrusel .movie img{
     width: 100%;
     vertical-align: top;
 }
@@ -217,23 +222,23 @@ main{
         flex-direction: column;
         text-align: center;
     }
-    .principal-movie{
+    .main-movie{
         font-size: 14px;
     }
-    .principal-movie .descripton{
+    .main-movie .descripton{
         max-width: 100px;
     }
 }
-.recomended-movies .carrousel-container{
+.peliculas-recomendadas .contenedor-carrusel{
     overflow: visible;
 }
-.carrousel-container .carrousel{
+.peliculas-recomendadas .contenedor-carrusel .carrusel{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
-.recomended-movies .directions,
-.recomended-movies .left-arrow, 
-.recomended-movies .right-arrow{
+.peliculas-recomendadas .left-arrow, 
+.peliculas-recomendadas .pointmark,
+.peliculas-recomendadas .right-arrow{
     display: none;
 }
