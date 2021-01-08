@@ -71,22 +71,28 @@ header nav a.active{
 }
 
 /* ---- ---- ---- ---- principal-movie ---- ---- ---- ---- */
+main{
+    width: 100%;
+    height: auto;
+}
+
+
 .main-movie{
-    font-size: 16px;
-    min-height: 40.62em;
-    color: var(--font-color);
-    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%), url(../imgs/backdrop.jpg);
-    background-position: center center;
-    background-size: cover;
     margin-bottom: 3.12em;
     display: flex;
     align-items: flex-end;
+    min-height: 40.62em;
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%), url(../imgs/backdrop.jpg);
+    background-position: center center;
+    background-size: cover;
+    color: var(--font-color);
+    font-size: 16px;
 }
-.main-movie .container{
+.main-description--container{
     margin: 0em 2em 0em 2em;
     margin-bottom: 1em;
 }
-.main-movie .title{
+.main-description--container--title{
     font-weight: 600;
     font-size: 3.12em;
     margin-bottom: 0.4em;
