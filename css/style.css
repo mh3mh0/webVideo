@@ -44,9 +44,9 @@ header{
 }
 .header--title-container h1{
     font-size: 5em;
-     font-family: 'Bebas Neue', cursive;
-     font-weight: normal;
-     color: var(--logo);
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: var(--logo);
 }
 .header--title-container .header--nav ul{
     text-decoration: none;
@@ -210,3 +210,27 @@ main{
     width: 100%;
     vertical-align: top;
 }
+
+/* ---- ---- ---- ---- Form-movie ---- ---- ---- ---- */
+/*.form{
+    padding: 3em;
+}
+.form--movies-container h2{
+    font-size: 5em;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: var(--logo);
+}
+
+.form--movies-container__form-group{
+    padding: 2em;
+    text-decoration: none;
+    list-style: none;
+    margin-right: 5px;
+    display: flex;
+    justify-content: left;
+}
+label{
+    color: var(--font-color-second);
+    font-size: medium;
+}*/

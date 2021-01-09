@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="webVideo" content="List of movies to watch">
     <title>webVideo</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -120,6 +121,32 @@
                 </div>
             </div>
         </section>
+
+        <section class="form">
+            <div class="form--movies-container">
+                <h2>Add Movie:</h2>
+                <form class="form--movies-container__form-group">
+                    <div class="group1">
+                        <label>Title</label>
+                        <input type="text" name="name" pattern="[A-Za-z]">
+                    </div>
+
+                    <div class="group2">
+                        <label>Genre</label>
+                        <input type="text" name="autor" pattern="[A-Za-z]">
+                    </div>    
+
+                    <div class="group3">
+                        <label>Year</label>
+                        <input type="date" name="año">
+                    </div>   
+                   
+                    <input type="button" id="record" value="Add">
+                </form>
+            </div>
+        </section>
    </main>
+
+   
 </body>
 </html>
