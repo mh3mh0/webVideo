@@ -148,6 +148,10 @@ main{
 }
 
 /* ---- ---- ---- ---- Main container and arrows ---- ---- ---- ---- */
+.recommended-movies{
+    padding: 5em;
+}
+
 .recommended-movies .container{
     margin-bottom: 70px;
 }
