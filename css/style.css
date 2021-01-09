@@ -190,7 +190,7 @@ main{
 .carrousel-container{
     width: 100%;
     padding: 20px 0;
-    overflow: hidden;
+    overflow-x: scroll;
     scroll-behavior: smooth;
 }
 .carrousel-container .carrousel{
