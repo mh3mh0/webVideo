@@ -25,12 +25,13 @@ html{
     background: var(--background);
 }
 
-/* ---- ---- ---- ---- header ---- ---- ---- ---- */
+/*? ---- ---- ---- ---- header ---- ---- ---- ---- */
 header{
-    padding: 15px 0;
+    padding: 15px 0px;
     justify-content: space-between;
     width: 100%;
     min-width: 320px;
+    border: yellow 2px solid;
 }
 .header--title-container{
     width: 98%;
@@ -41,12 +42,14 @@ header{
     justify-content: space-between;
     align-items: center;
     align-self: center;
+    border: yellow 2px solid;
 }
 .header--title-container h1{
     font-size: 5em;
     font-family: 'Bebas Neue', cursive;
     font-weight: normal;
     color: var(--logo);
+    border: yellow 2px solid;
 }
 .header--title-container .header--nav ul{
     text-decoration: none;
@@ -54,6 +57,7 @@ header{
     margin-right: 5px;
     display: flex;
     justify-content: center;
+    border: yellow 2px solid;
 }
 .header--title-container .header--nav li{
     margin: 0 .75rem;
@@ -70,10 +74,12 @@ header nav a.active{
     color: #FFF;
 }
 
-/* ---- ---- ---- ---- principal-movie ---- ---- ---- ---- */
+/*? ---- ---- ---- ---- principal-movie ---- ---- ---- ---- */
 main{
     width: 100%;
     height: auto;
+    padding-bottom: 1em;
+    border: rgb(0, 179, 255) 2px solid;
 }
 
 
@@ -87,6 +93,7 @@ main{
     background-size: cover;
     color: var(--font-color);
     font-size: 16px;
+    border: yellow 2px solid;
 }
 .main-description--container{
     margin: 0em 2em 0em 2em;
@@ -124,11 +131,12 @@ main{
     margin-right: 1.25em;
 }
 
-/* ---- ---- ---- ---- Title container and controls-pointmark ---- ---- ---- ---- */
+/*? ---- ---- ---- ---- Title container and controls-pointmark ---- ---- ---- ---- */
 .container-title-controls{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    border: yellow 2px solid;
 }
 .container-title-controls h3{
     color: var(--font-color);
@@ -147,9 +155,10 @@ main{
     background: var(--red);
 }
 
-/* ---- ---- ---- ---- Main container and arrows ---- ---- ---- ---- */
+/*? ---- ---- ---- ---- Main container and arrows ---- ---- ---- ---- */
 .recommended-movies{
     padding: 5em;
+    border: yellow 2px solid;
 }
 
 .recommended-movies .container{
@@ -186,12 +195,13 @@ main{
     right: 0;
 }
 
-/* ---- ---- ---- ---- Carrousel ---- ---- ---- ---- */
+/*? ---- ---- ---- ---- Carrousel ---- ---- ---- ---- */
 .carrousel-container{
     width: 100%;
     padding: 20px 0;
     overflow: hidden;
     scroll-behavior: smooth;
+    border: yellow 2px solid;
 }
 .carrousel-container .carrousel{
     display: flex;
@@ -211,9 +221,17 @@ main{
     vertical-align: top;
 }
 
-/* ---- ---- ---- ---- Form-movie ---- ---- ---- ---- */
-/*.form{
-    padding: 3em;
+/*? ---- ---- ---- ---- Form-movie ---- ---- ---- ---- */
+.form{
+    padding: 15px 10px;
+    align-self: stretch;
+    margin: 0em 2em 0em 2em;
+    margin-bottom: 1em;
+    border: yellow 2px solid;
+}
+
+.form--movies-container{
+    margin-bottom: 10px;
 }
 .form--movies-container h2{
     font-size: 5em;
@@ -223,14 +241,30 @@ main{
 }
 
 .form--movies-container__form-group{
-    padding: 2em;
-    text-decoration: none;
-    list-style: none;
-    margin-right: 5px;
-    display: flex;
-    justify-content: left;
+    margin: 5px 5px;
+    padding: 1em;
+    display: block;
 }
 label{
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin: 0 .75rem;
     color: var(--font-color-second);
     font-size: medium;
-}*/
+}
+.button{
+    margin-right: auto;
+    padding-left: 1px;
+}
+
+
+/*? ---- ---- ---- ---- Footer---- ---- ---- ---- */
+footer{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    background-color: var(--logo);
+    border: yellow 2px solid;
+}

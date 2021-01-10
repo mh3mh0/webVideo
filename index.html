@@ -9,11 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/tablet.css" media="(max-width: 800px)">
-
-
-
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
 </head>
 <body>
    <header>
@@ -128,25 +123,34 @@
                 <form class="form--movies-container__form-group">
                     <div class="group1">
                         <label>Title</label>
-                        <input type="text" name="name" pattern="[A-Za-z]">
+                        <input type="text" name="name" pattern="[A-Za-z]" placeholder="Enter title">
                     </div>
 
                     <div class="group2">
                         <label>Genre</label>
-                        <input type="text" name="autor" pattern="[A-Za-z]">
+                        <input type="text" name="autor" pattern="[A-Za-z]" placeholder="Enter genre">
                     </div>    
 
                     <div class="group3">
                         <label>Year</label>
-                        <input type="date" name="año">
+                        <input type="number" name="año" placeholder="Enter year">
                     </div>   
                    
-                    <input type="button" id="record" value="Add">
+                    <input type="button" id="record" value="submit">
                 </form>
             </div>
         </section>
    </main>
 
-   
+    <footer id="footer">
+        <div class="footer-container">
+            <p>
+                <h4>CopyRights @</h4>
+            </p>
+        </div>
+    </footer>       
+
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
