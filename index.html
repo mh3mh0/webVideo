@@ -11,23 +11,21 @@
     <link rel="stylesheet" href="./css/tablet.css" media="(max-width: 800px)">
 </head>
 <body>
-   <header>
-       <div class="header--title-container">
+   <header class="header--title-container">
            <h1>webVideo</h1>
            <nav class="header--nav">
                <ul>
-                <li><a href="#" class="active link" ><h2>Start</h2></a></li>
-                <li><a href="#"><h2>Movies</h2></a></li>
-                <li><a href="#"><h2>New Movies</h2></a></li>
-                <li><a href="#list"><h2>List</h2></a></li>
+                <li><a href="#" class="active link" >Start</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">New Movies</a></li>
+                <li><a href="#list">List</a></li>
                </ul>
            </nav>
-       </div>
    </header>
 
    <main>
         <section class="main-container">
-            <div class="main-movie">
+            <article class="main-movie">
                 <div class="main-description--container">
                     <h3 class="main-description--container--title">Interestellar</h3>
                     <p class="main-description">
@@ -36,13 +34,13 @@
                     <button role="button" class="button"><i class="far fa-play-circle"></i>PLAY</button>
                     <button role="button" class="button"><i class="fas fa-info-circle"></i>INFO</button>
                 </div>
-            </div>
+            </article>
         </section>
 
         <section id="list">
-            <div class="recommended-movies">
+            <article class="recommended-movies">
+                <h3>Recomended Movies</h3>
                 <div class="container-title-controls">
-                    <h3>Recomended Movies</h3>
                     <div class="pointmark"></div>
                 </div>
 
@@ -114,11 +112,10 @@
                             </div>
                     <button role="button" id="rightArrow" class="right-arrow"><i class="fas fa-angle-right"></i></button>
                 </div>
-            </div>
+            </article>
         </section>
 
-        <section class="form1">
-            <div class="form1--movies-container">
+        <section class="form form1--movies-container">
                 <h2>Add Movie:</h2>
                 <form class="form1--movies-container__form-group">
                     <div class="group1">
@@ -138,7 +135,6 @@
                     <button role="button" class="button" type="submit"><i class="fab fa-avianex"></i>SEND</button>
                     <!--<input type="submit" id="record" value="send">-->
                 </form>
-            </div>
         </section>
    </main>
 

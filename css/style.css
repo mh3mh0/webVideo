@@ -23,6 +23,7 @@ html{
     font-size: 62.5%;
     font-family: 'Open Sans', sans-serif;
     background: var(--background);
+    scroll-behavior: smooth;
 }
 
 /*? ---- ---- ---- ---- header ---- ---- ---- ---- */
@@ -65,6 +66,7 @@ header{
 .header--title-container .header--nav a{
     outline: none;
     text-decoration: none;
+    font-size: 1.5em;
 }
 .header--nav a{
     color: var(--font-color-second);
@@ -132,15 +134,15 @@ main{
 }
 
 /*? ---- ---- ---- ---- Title container and controls-pointmark ---- ---- ---- ---- */
+.recommended-movies h3{
+    color: var(--font-color);
+    font-size: 30px;
+}
 .container-title-controls{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     border: yellow 2px solid;
-}
-.container-title-controls h3{
-    color: var(--font-color);
-    font-size: 30px;
 }
 .container-title-controls .pointmark button{
     background: var(--font-color);
@@ -222,7 +224,7 @@ main{
 }
 
 /*? ---- ---- ---- ---- Form1-movie ---- ---- ---- ---- */
-.form1{
+.form{
     padding: 15px 10px;
     align-self: stretch;
     margin: 0em 2em 0em 2em;
@@ -238,39 +240,40 @@ main{
     font-family: 'Bebas Neue', cursive;
     font-weight: normal;
     color: var(--logo);
+    border: yellow 2px solid;
 }
 
 .form1--movies-container__form-group{
     margin: 5px 5px;
     padding: 1em;
-    display: block;
+    display: inline-grid;
+    justify-content: center;
+    border: yellow 2px solid;
 }
 label{
     display: inline-block;
     width: 150px;
-    text-align: right;
-    margin: 0 .75rem;
+    margin: .1em;
     color: var(--font-color-second);
     font-size: medium;
 }
-.form1 .button{
+.form .button{
     background: rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 0.31em;
     padding: 1em;
     color: #FFF;
-    margin-top: 1em;
-    margin-right: 1.25em;
+    margin-block: 1.2em;
     cursor: pointer;
     transition: .3s ease all;
     font-size: 1.12em;
   
 }
-.form1 .button:hover{
+.form .button:hover{
     background: var(--font-color);
     color: #000;
 }
-.form1 .button i{
+.form .button i{
     margin-right: 1.25em;
 }
 
