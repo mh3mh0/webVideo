@@ -25,3 +25,8 @@ header .container{
 .recommended-movies .right-arrow{
     display: none;
 }
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
