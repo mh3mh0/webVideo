@@ -27,7 +27,7 @@ html{
 
 /*? ---- ---- ---- ---- header ---- ---- ---- ---- */
 header{
-    padding: 15px 0px;
+    padding: 1em;
     justify-content: space-between;
     width: 100%;
     min-width: 320px;
@@ -115,7 +115,7 @@ main{
     background: rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 0.31em;
-    padding: 0.93em 1.87em;
+    padding: 1em;
     color: #FFF;
     margin-top: 1em;
     margin-right: 1.25em;
@@ -157,7 +157,7 @@ main{
 
 /*? ---- ---- ---- ---- Main container and arrows ---- ---- ---- ---- */
 .recommended-movies{
-    padding: 5em;
+    padding: 3em;
     border: yellow 2px solid;
 }
 
@@ -198,7 +198,7 @@ main{
 /*? ---- ---- ---- ---- Carrousel ---- ---- ---- ---- */
 .carrousel-container{
     width: 100%;
-    padding: 20px 0;
+    padding: 1em;
     overflow: hidden;
     scroll-behavior: smooth;
     border: yellow 2px solid;
@@ -261,9 +261,11 @@ label{
 
 /*? ---- ---- ---- ---- Footer---- ---- ---- ---- */
 footer{
+    padding: 0.5em;
     display: block;
     width: 100%;
     text-align: center;
+    font-size: 2em;
     color: #FFF;
     background-color: var(--logo);
     border: yellow 2px solid;
