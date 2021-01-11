@@ -119,18 +119,6 @@ main{
     line-height: 1.9rem;
     max-width: 50%;
 }
-/*.main-movie .button{
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    border-radius: 0.31em;
-    padding: 1em;
-    color: #FFF;
-    margin-top: 1em;
-    margin-right: 1.25em;
-    cursor: pointer;
-    transition: .3s ease all;
-    font-size: 1.12em;
-}*/
 .main-movie .button:hover{
     background: var(--font-color);
     color: #000;
@@ -140,14 +128,14 @@ main{
 }
 
 /*? ---- ---- ---- ---- Title container and controls-pointmark ---- ---- ---- ---- */
-.recommended-movies h3{
+.recommended-movies p{
     color: var(--font-color);
-    font-size: 30px;
+    font-size: 3em;
 }
 .container-title-controls{
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     border: yellow 2px solid;
 }
 .container-title-controls .pointmark button{
@@ -158,9 +146,9 @@ main{
     border: none;
     margin-right: 2px;
 }
-.container-title-controls .pointmark button:hover,
-.container-title-controls .pointmark button.active{
-    background: var(--red);
+.pointmark button:hover,
+.pointmark button.active{
+    background: red;
 }
 
 /*? ---- ---- ---- ---- Main container and arrows ---- ---- ---- ---- */
@@ -257,18 +245,6 @@ label{
     color: var(--font-color-second);
     font-size: 1.5em;
 }
-/*.form .button{
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    border-radius: 0.31em;
-    padding: 1em;
-    color: #FFF;
-    margin-block: 1.2em;
-    cursor: pointer;
-    transition: .3s ease all;
-    font-size: 1.12em;
-  
-}*/
 .form .button:hover{
     background: var(--font-color);
     color: #000;
