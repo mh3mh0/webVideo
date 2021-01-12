@@ -68,3 +68,6 @@ buttonNav.addEventListener('click', function () {
   links.classList.toggle("show-links");
 });*/
 //?--------------------- Video -----------------------
+window.play = function(){
+    document.getElementById('video1').play();
+};
