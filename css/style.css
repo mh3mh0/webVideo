@@ -175,8 +175,9 @@ main{
     margin-right: 1.25em;
 }
 /*? ---- ---- ---- ---- Video---- ---- ---- ---- */
+
 .video video{
-    margin: 0 auto;
+    margin: .5em;
     height: 150px;
 }
 
