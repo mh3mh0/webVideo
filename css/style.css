@@ -248,11 +248,83 @@ main{
 /*? ---- ---- ---- ---- Carrousel ---- ---- ---- ---- */
 .carrousel-container{
     width: 100%;
-    padding: 1em;
+    padding: .5em;
     overflow: hidden;
     scroll-behavior: smooth;
     border: yellow 2px solid;
 }
+
+/*.carrousel-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.carrousel-container figure{
+    position: relative;
+    height: 250;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+.carrousel-container figure img{
+    width: 100%;
+    height: 100%;
+    transition: all .4s ease-out;
+}*/
+
+.carrousel-container figure{
+    position: relative;
+    height: 350;
+    width: 450px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}    
+.carrousel-container figure .cover{
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(6, 6, 6, 0.8);
+    transition: all .3s ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+.carrousel-container figure:hover > .cover{
+    opacity: 1;
+    visibility: visible;
+}
+.carrousel-container figure:hover > .cover h3{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.carrousel-container figure .cover h3{
+    color: var(--font-color);
+    font-weight: 400;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 120px;
+    transition: all .3s ease-out;
+}
+.carrousel-container figure .cover p{
+    color: var(--font-color);
+    font-size: 10px;
+    line-height: 1;
+}
+
+
+
+
+
+
+
 .carrousel-container .carrousel{
     display: flex;
     flex-wrap: nowrap;
