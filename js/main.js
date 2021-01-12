@@ -58,3 +58,12 @@ movies.forEach((movie) =>{
 queue.addEventListener('mouseleave', () => {
     movies.forEach(movie => movie.classList.remove('hover'));
 })
+
+//?--------------------- Nav-----------------------
+
+/*const buttonNav = document.querySelector('.buttonNav');
+const links = document.querySelector('.links');
+
+buttonNav.addEventListener('click', function () {
+  links.classList.toggle("show-links");
+});*/

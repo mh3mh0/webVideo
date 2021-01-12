@@ -12,11 +12,12 @@
     --background: #363535;
     --font-color:#fffefe;
     --font-color-second: #ebb8bb;
+    --transition: all 0.3s linear;
 }
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 html{
     font-size: 62.5%;
@@ -43,11 +44,22 @@ header{
     justify-content: space-between;
     width: 100%;
     min-width: 320px;
+    place-items: center center;
     border: yellow 2px solid;
 }
 .header--title-container{
+   /* max-width: 1170px;
+    margin: 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: yellow 2px solid;*/
+
+
+
     padding: 10px 20px;
-    min-width: 300px;
+    min-width: 320px;
     max-width: 1400px;
     margin: auto;
     display: flex;
@@ -62,27 +74,63 @@ header{
     color: var(--logo);
     border: yellow 2px solid;
 }
-.header--title-container .header--nav ul{
+
+
+
+/*?-----------------  Nav-burguer------------*/
+.nav--header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    border: yellow 2px solid;
+}
+
+.buttonNav{
+    margin: 0 .1em 0 .1em;
+    padding: 1em;
+    float: right;
+    font-size: 1.2em;
+    border-radius: 0.31em;
+    border-color: transparent;
+    background: rgba(0, 0, 0, 0.5);
+    transition: var(--transition);
+    cursor: pointer;
+    color: #FFF;
+    border: yellow 2px solid;
+
+}
+
+.buttonNav:hover{
+    color: var(--font-color-second);
+    transform: rotate(90deg);
+}
+  
+.header--title-container .nav--header .links{
+    list-style-type: none;
     list-style: none;
     margin-right: 5px;
     display: flex;
     justify-content: center;
     border: yellow 2px solid;
 }
-.header--title-container .header--nav li{
+
+.header--title-container .nav--header li{
     margin: 0 .75rem;
 }
-.header--title-container .header--nav a{
+.header--title-container .nav--header a{
     text-decoration: none;
     font-size: 1.5em;
 }
-.header--nav a{
+.nav--header a{
     color: var(--font-color-second);
 }
 header nav a:hover,
 header nav a.active{
     color: #FFF;
 }
+
+
 
 /*? ---- ---- ---- ---- principal-movie ---- ---- ---- ---- */
 main{
