@@ -278,53 +278,19 @@ main{
 
 .carrousel-container figure{
     position: relative;
+    display: inline-block;
     height: 350;
     width: 450px;
     overflow: hidden;
     border-radius: 6px;
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.8);
     cursor: pointer;
-}    
-.carrousel-container figure .cover{
-    margin: 0 auto;
-    position: absolute;
-    top: 0;
+}   
+.carrousel-container figure img{
     width: 100%;
     height: 100%;
-    background: rgba(6, 6, 6, 0.8);
     transition: all .3s ease-out;
-    opacity: 0;
-    visibility: hidden;
-    text-align: center;
-}
-.carrousel-container figure:hover > .cover{
-    opacity: 1;
-    visibility: visible;
-}
-.carrousel-container figure:hover > .cover h3{
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-.carrousel-container figure .cover h3{
-    color: var(--font-color);
-    font-weight: 400;
-    font-size: 25px;
-    margin-top: 30px;
-    margin-bottom: 120px;
-    transition: all .3s ease-out;
-}
-.carrousel-container figure .cover p{
-    color: var(--font-color);
-    font-size: 10px;
-    line-height: 1;
-}
-
-
-
-
-
-
-
+} 
 .carrousel-container .carrousel{
     display: flex;
     flex-wrap: nowrap;
@@ -334,14 +300,52 @@ main{
     transition: .3s ease all;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .4);
 }
-.movie.hover{
-    transform: scale(1.2);
+.movie:hover{
+    transform: scale(1.3);
     transform-origin: center;
 }
 .movie img{
     width: 100%;
     vertical-align: top;
 }
+
+/*?--------------- Cover -----------------------*/
+.carrousel-container figure .cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(6, 6, 6, 0.8);
+    display: center;
+    justify-content: center;
+    visibility: hidden;
+    text-align: center;
+    opacity: 0;
+    transition: all .3s ease-out;
+}
+.carrousel-container figure:hover > .cover{
+    opacity: 1;
+    visibility: visible;
+}
+/*.carrousel-container figure:hover > .cover .movieName{
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+.carrousel-container figcaption .cover .movieName{
+    color: var(--font-color);
+    font-weight: bold;
+    transition: all .3s ease-out;
+}*/
+.carrousel-container figcaption .cover p{
+    color: var(--font-color);
+    font-size: 10px;
+    line-height: .1;
+    width: 80%;
+    max-width: 20px;
+    margin: auto;
+}
+
 
 /*? ---- ---- ---- ---- Form1-movie ---- ---- ---- ---- */
 .form{
