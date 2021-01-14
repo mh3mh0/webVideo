@@ -2,7 +2,7 @@ header .logo{
     margin-bottom: 10px;
     font-size: 30px;
 }
-header .container{
+header .header--title-container{
     flex-direction: column;
     text-align: center;
 }
@@ -12,6 +12,7 @@ header .container{
 .main-movie .main-description{
     max-width: 100%;
 }
+/*?------------ Carrousel -------*/
 .principal-container .carrousel-container{
     overflow: visible;
 }
@@ -25,7 +26,8 @@ header .container{
 .recommended-movies .right-arrow{
     display: none;
 }
-.button-container{
+/*?--------------form---------*/
+.form--button{
     display: flex;
     justify-content: center;
     align-items: center;

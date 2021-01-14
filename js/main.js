@@ -26,7 +26,7 @@ leftArrow.addEventListener('click', () => {
     }
 });
 
-//? ---- ---- ---- ---- Pages ---- ---- ---- ---- 
+//? ---- ---- ---- ---- Pages-carrousel ---- ---- ---- ---- 
 const pageNumber = Math.ceil(movies.length / 5);
 for(let i = 0; i < pageNumber; i ++){
     const indicator = document.createElement('button');
@@ -39,7 +39,7 @@ for(let i = 0; i < pageNumber; i ++){
     indicator.addEventListener('click', (e) => {
         queue.scrollLeft = i * queue.offsetWidth;
 
-        document.querySelector('.indicator .active').classList.remove('active');
+        document.querySelector('.pointmark .active').classList.remove('active');
         e.target.classList.add('active');
     });
 }
@@ -51,7 +51,7 @@ movies.forEach((movie) =>{
         setTimeout(() =>{
             movies.forEach(movie => movie.classList.remove('hover'));
             element.classList.add('hover');
-        }, 200);
+        }, 300);
     });
 });
 
@@ -60,13 +60,12 @@ queue.addEventListener('mouseleave', () => {
 })
 
 //?--------------------- Nav-----------------------
-
-/*const buttonNav = document.querySelector('.buttonNav');
+const buttonNav = document.querySelector('.buttonNav');
 const links = document.querySelector('.links');
 
 buttonNav.addEventListener('click', function () {
   links.classList.toggle("show-links");
-});*/
+});
 //?--------------------- Video -----------------------
 window.play = function(){
     document.getElementById('video1').play();
