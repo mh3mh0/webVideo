@@ -36,7 +36,7 @@ a{
 }
 @media screen and (min-width: 800px) {
     h1 {
-      font-size: 4rem;
+      font-size: 3em;
       line-height: 1;
     }
     body {
@@ -61,31 +61,12 @@ a{
 
 /*?------------ header--------------*/
   /* section */
-  .section {
-    padding: 5rem 0;
-  }
-  
-  .section-center {
-    width: 90vw;
-    margin: 0 auto;
-    max-width: 1170px;
-  }
-  @media screen and (min-width: 992px) {
-    .section-center {
-      width: 95vw;
-    }
-  }
   main {
     min-height: 100vh;
-    display: grid;
+
     place-items: center;
   }
-  /*
-  =============== 
-  Navbar
-  ===============
-  */
- 
+  
   .nav-header {
     display: flex;
     align-items: center;
@@ -101,7 +82,7 @@ a{
     border: yellow 1px solid;
   }
   .nav-toggle {
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--logo);
     background: transparent;
     border-color: transparent;
