@@ -2,10 +2,10 @@ header .logo{
     margin-bottom: 10px;
     font-size: 30px;
 }
-header .header--title-container{
-    flex-direction: column;
-    text-align: center;
-}
+
+/*?----- Links ------*/
+
+
 .main-movie{
     font-size: 14px;
 }
@@ -33,34 +33,3 @@ header .header--title-container{
     align-items: center;
 }
 /*?------NAV---------*/
-/*@media screen and (min-width: 550px) {
-
-    .nav-center {
-        max-width: 1170px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem;
-      }
-      .nav--header {
-        padding: 0;
-      }
-      .buttonNav {
-        display: none;
-      }
-
-
-    .links {
-        height: auto;
-        display: flex;
-      }
-      .links a {
-        padding: 0;
-        margin: 0 0.5rem;
-      }
-      .links a:hover {
-        padding: 0;
-        background: transparent;
-      }
-}*/

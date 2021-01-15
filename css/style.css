@@ -19,6 +19,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    border: rgb(0, 0, 255) 1px solid;
 }
 
 html{
@@ -58,7 +59,7 @@ a{
 }
 
 
-/*?------------ testing new hearder--------------*/
+/*?------------ header--------------*/
   /* section */
   .section {
     padding: 5rem 0;
