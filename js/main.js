@@ -55,7 +55,7 @@ for(let i = 0; i < pageNumber; i ++){
 }
 
 //? ---- ---- ---- ---- Hover ---- ---- ---- ---- 
-movies.forEach((movie) =>{
+/*movies.forEach((movie) =>{
     movie.addEventListener('mouseenter', (e) => {
         const element = e.currentTarget;
         setTimeout(() =>{
@@ -67,7 +67,7 @@ movies.forEach((movie) =>{
 
 queue.addEventListener('mouseleave', () => {
     movies.forEach(movie => movie.classList.remove('hover'));
-})
+})*/
 
 //?--------------------- Video -----------------------
 window.play = function(){

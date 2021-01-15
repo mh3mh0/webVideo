@@ -34,7 +34,7 @@ ul{
 a{
     text-decoration: none;
 }
-@media screen and (min-width: 800px) {
+/*@media screen and (min-width: 800px) {
     h1 {
       font-size: 3em;
       line-height: 1;
@@ -43,7 +43,7 @@ a{
       font-size: 1rem;
     }
    
-  }
+  }*/
 
 .buttonGlobal{
     background: rgba(0, 0, 0, 0.5);
@@ -173,8 +173,7 @@ main{
     border: yellow 1px solid;
 }
 .main-description--container{
-    margin: 0em 2em 0em 2em;
-    margin-bottom: 1em;
+    margin: 0em 1em 1em;
 }
 .main-description--container--title{
     font-size: 3.12em;
@@ -197,6 +196,7 @@ main{
 /*? ---- ---- ---- ---- Video ---- ---- ---- ---- */
 
 .video video{
+    width: 250px;
     margin: .5em;
     height: 150px;
 }
@@ -305,17 +305,20 @@ main{
     visibility: hidden;
     opacity: 0;
     transition: all .3s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .carrousel-container .carrousel .movie:hover > .cover{
     opacity: 1;
     visibility: visible;
 }
 .carrousel-container .carrousel .movie .cover p{
-    margin: 0em auto;
+    margin: 0 auto;
     position: fixed;
     color: var(--font-color);
     line-height: 1em;
-    font-size: 2em;
+    font-size: 1.1em;
     text-align: center;
 }
 
