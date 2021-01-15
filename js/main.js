@@ -1,3 +1,13 @@
+//?--------------- testing new nav ------------ */
+
+const navToggle = document.querySelector(".nav-toggle");
+const links = document.querySelector(".links");
+
+navToggle.addEventListener("click", function () {
+  links.classList.toggle("show-links");
+});
+
+//?--------- Carrousel-arrows ---------*/
 const queue = document.querySelector('.carrousel-container');
 const movies = document.querySelectorAll('.movie');
 
@@ -59,13 +69,6 @@ queue.addEventListener('mouseleave', () => {
     movies.forEach(movie => movie.classList.remove('hover'));
 })
 
-//?--------------------- Nav-----------------------
-const buttonNav = document.querySelector('.buttonNav');
-const links = document.querySelector('.links');
-
-buttonNav.addEventListener('click', function () {
-  links.classList.toggle("show-links");
-});
 //?--------------------- Video -----------------------
 window.play = function(){
     document.getElementById('video1').play();

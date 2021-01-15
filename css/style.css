@@ -5,26 +5,45 @@
 4. Visual
 5. Misselanius
 */
-
 :root{
     /*colors*/
     --logo: #ff7070;
     --background: #363535;
     --font-color:#fffefe;
     --font-color-second: #ebb8bb;
-    --transition: all 0.3s linear;
+    --transition: all 0.4s linear;
 }
-*{
+*, 
+::after,
+::before{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 html{
     font-size: 62.5%;
     font-family: 'Open Sans', sans-serif;
     background: var(--background);
     scroll-behavior: smooth;
 }
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+@media screen and (min-width: 800px) {
+    h1 {
+      font-size: 4rem;
+      line-height: 1;
+    }
+    body {
+      font-size: 1rem;
+    }
+   
+  }
+
 .buttonGlobal{
     background: rgba(0, 0, 0, 0.5);
     border: none;
@@ -38,94 +57,124 @@ html{
     font-size: 1.12em;
 }
 
-/*? ---- ---- ---- ---- header ---- ---- ---- ---- */
-header{
-    padding: 1em;
-    justify-content: space-between;
-    width: 100%;
-    min-width: 320px;
-    place-items: center center;
-    border: yellow 2px solid;
-}
-.header--title-container{
-    padding: 10px 20px;
-    min-width: 320px;
-    max-width: 1400px;
-    margin: auto;
+
+/*?------------ testing new hearder--------------*/
+  /* section */
+  .section {
+    padding: 5rem 0;
+  }
+  
+  .section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+  }
+  @media screen and (min-width: 992px) {
+    .section-center {
+      width: 95vw;
+    }
+  }
+  main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  /*
+  =============== 
+  Navbar
+  ===============
+  */
+ 
+  .nav-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border: yellow 2px solid;
-}
-.header--title-container h1{
+    justify-content: space-between;
+    padding: 1rem;
+    border: yellow 1px solid;
+  }
+  .nav-header h1{
     font-size: 5em;
     font-family: 'Bebas Neue', cursive;
     font-weight: normal;
     color: var(--logo);
-    border: yellow 2px solid;
-}
-
-
-
-/*?-----------------  Nav-burguer------------*/
-.nav--header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em;
-    border: yellow 2px solid;
-}
-
-.buttonNav{
-    margin:  0 .1em;
-    padding: 1em;
-    float: right;
-    font-size: 1.2em;
-    border-radius: 0.31em;
+    border: yellow 1px solid;
+  }
+  .nav-toggle {
+    font-size: 2rem;
+    color: var(--logo);
+    background: transparent;
     border-color: transparent;
-    background: rgba(0, 0, 0, 0.5);
     transition: var(--transition);
     cursor: pointer;
-    color: #FFF;
-    border: yellow 2px solid;
-
-}
-
-.buttonNav:hover{
-    color: var(--font-color-second);
+    border: yellow 1px solid;
+  }
+  .nav-toggle:hover {
+    color: var(--font-color);
     transform: rotate(90deg);
-}
-  
-.header--title-container .nav--header .links{
-    list-style-type: none;
-    list-style: none;
-    margin-right: 5px;
-    display: flex;
-    justify-content: center;
-    border: yellow 2px solid;
-}
+    border: yellow 1px solid;
+  }
 
-.header--title-container .nav--header li{
-    list-style: none;
-    margin: 0 .75rem;
-    display: flex;
-}
-.header--title-container .nav--header a{
-    text-decoration: none;
-    font-size: 1.5em;
-}
-.nav--header a{
+
+
+  /*?----------------links---------*/
+  .links a {
     color: var(--font-color-second);
-}
-header nav a:hover,
-header nav a.active{
-    color: #FFF;
-}
-
+    font-size: 1.5em;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+    border: yellow 1px solid;
+  }
+  .links a:hover {
+    color: var(--font-color);
+    padding-left: 1.5rem;
+    border: yellow 1px solid;
+  }
+  .links {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+    border: yellow 1px solid;
+  }
+  .show-links {
+    height: 15rem;
+    border: yellow 1px solid;
+  }
+  
+  @media screen and (min-width: 800px) {
+    .nav-center {
+      max-width: 1170px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .nav-header {
+      padding: 0;
+    }
+    .nav-toggle {
+      display: none;
+    }
+    .links {
+      height: auto;
+      display: flex;
+    }
+    .links a {
+      padding: 0;
+      margin: 0 0.5rem;
+    }
+    .links a:hover {
+      padding: 0;
+      background: transparent;
+    }
+  }
+  
 /*? ---- ---- ---- ---- principal-movie ---- ---- ---- ---- */
 main{
     padding-bottom: 1em;
-    border: rgb(0, 179, 255) 2px solid;
 }
 
 
@@ -139,7 +188,7 @@ main{
     background-size: cover;
     color: var(--font-color);
     font-size: 16px;
-    border: yellow 2px solid;
+    border: yellow 1px solid;
 }
 .main-description--container{
     margin: 0em 2em 0em 2em;
@@ -179,7 +228,7 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: yellow 2px solid;
+    border: yellow 1px solid;
 }
 .container-title-controls .pointmark button{
     background: var(--font-color);
@@ -197,7 +246,7 @@ main{
 /*? ---- ---- ---- ---- Main container and arrows ---- ---- ---- ---- */
 .recommended-movies{
     padding: 3em;
-    border: yellow 2px solid;
+    border: yellow 1px solid;
 }
 
 .recommended-movies .container{
@@ -241,7 +290,7 @@ main{
     padding: 20px 0;
     overflow: hidden;
     scroll-behavior: smooth;
-    border: yellow 2px solid;
+    border: yellow 1px solid;
 }
 .carrousel-container .carrousel{
     display: flex;
@@ -292,14 +341,14 @@ main{
 .form{
     padding: 15px 10px;
     margin: 0em 2em 1em 2em;
-    border: yellow 2px solid;
+    border: yellow 1px solid;
 }
 .form1--movies-container h2{
     font-size: 5em;
     font-family: 'Bebas Neue', cursive;
     font-weight: normal;
     color: var(--logo);
-    border: yellow 2px solid;
+    border: yellow 1px solid;
 }
 
 .form1--movies-container__form-group{
@@ -307,7 +356,7 @@ main{
     padding: 1em;
     display: inline-grid;
     justify-content: center;
-    border: yellow 2px solid;
+    border: yellow 1px solid;
 }
 label{
     display: inline-block;
@@ -335,5 +384,5 @@ footer{
     font-size: 2em;
     color: #FFF;
     background-color: var(--logo);
-    border: yellow 2px solid;
+    border: yellow 1px solid;
 }
