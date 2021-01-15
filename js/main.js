@@ -1,4 +1,4 @@
-//?--------------- testing new nav ------------ */
+//?--------------- nav ------------ */
 
 const navToggle = document.querySelector(".nav-toggle");
 const links = document.querySelector(".links");
@@ -69,7 +69,22 @@ queue.addEventListener('mouseleave', () => {
     movies.forEach(movie => movie.classList.remove('hover'));
 })*/
 
-//?--------------------- Video -----------------------
-window.play = function(){
-    document.getElementById('video1').play();
-};
+//?--------------------- VideoPlay -----------------------
+window.playPause = function(){
+document.getElementById("button").onclick = function(){
+    if(document.getElementById("video1").paused){
+        document.getElementById("video1").play();
+        this.innerHTML ="Pause";
+        }else{
+            document.getElementById("video1").pause();
+            this.innerHTML = "Play";
+        }
+    }
+}
+//?------------- INFOButton ----------------------*/
+/*const infoButton = document.querySelector("infoButton");
+const links = document.querySelector(".links");
+
+infoButton.addEventListener("click", function () {
+  links.classList.toggle(".show--main-description ");
+});*/
