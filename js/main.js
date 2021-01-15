@@ -82,9 +82,12 @@ document.getElementById("button").onclick = function(){
     }
 }
 //?------------- INFOButton ----------------------*/
-/*const infoButton = document.querySelector("infoButton");
-const links = document.querySelector(".links");
-
-infoButton.addEventListener("click", function () {
-  links.classList.toggle(".show--main-description ");
-});*/
+function showHide_Info(show){
+    if (document.getElementById){ 
+        var el = document.getElementById(show);
+        el.style.display = (el.style.display == 'none') ? 'block' : 'none'; 
+    }
+}
+window.onload = function(){
+    showHide_Info('infoMovie');
+}
