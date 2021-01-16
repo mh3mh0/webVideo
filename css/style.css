@@ -12,6 +12,7 @@
     --font-color:#fffefe;
     --font-color-second: #ebb8bb;
     --transition: all 0.4s linear;
+    --text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
 }
 *, 
 ::after,
@@ -79,7 +80,7 @@ a{
     font-family: 'Bebas Neue', cursive;
     font-weight: normal;
     color: var(--logo);
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);;
+    text-shadow: var(--text-shadow);
    /* border: yellow 1px solid;*/
   }
   .nav-toggle {
@@ -108,6 +109,7 @@ a{
     display: block;
     padding: 0.5rem 1rem;
     transition: var(--transition);
+    text-shadow: var(--text-shadow);
    /* border: yellow 1px solid;*/
   }
   .links a:hover {
@@ -179,6 +181,7 @@ main{
 .main-description--container--title{
     font-size: 3.12em;
     margin-bottom: 0.4em;
+    text-shadow: var(--text-shadow);
 }
 .main-movie .descripton p{
     margin-bottom: 1.25em;
@@ -207,12 +210,16 @@ main{
 .recommended-movies p{
     color: var(--font-color);
     font-size: 3em;
+    text-shadow: var(--text-shadow);
 }
 .container-title-controls{
     display: flex;
     justify-content: space-between;
     align-items: center;
    /* border: yellow 1px solid;*/
+}
+.container-title-controls .pointmark{
+    box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.8);
 }
 .container-title-controls .pointmark button{
     background: var(--font-color);
@@ -272,6 +279,7 @@ main{
 .carrousel-container{
     width: 100%;
     padding: 20px 0;
+    border-radius: 6px;
     overflow: hidden;
     scroll-behavior: smooth;
    /* border: yellow 1px solid;*/
@@ -283,7 +291,7 @@ main{
 .carrousel-container .carrousel .movie{
     min-width: 20%;
     transition: .3s ease all;
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.8);
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.56);
     cursor: pointer;
 }  
 .carrousel-container .carrousel .movie:hover{
@@ -335,6 +343,7 @@ main{
     font-family: 'Bebas Neue', cursive;
     font-weight: normal;
     color: var(--logo);
+    text-shadow: var(--text-shadow);
    /* border: yellow 1px solid;*/
 }
 
@@ -351,6 +360,7 @@ label{
     margin: .1em;
     color: var(--font-color-second);
     font-size: 1.5em;
+    text-shadow: var(--text-shadow);
 }
 .form .button:hover{
     background: var(--font-color);
