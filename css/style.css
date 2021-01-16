@@ -72,14 +72,15 @@ a{
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    border: yellow 1px solid;
+   /* border: yellow 1px solid;*/
   }
   .nav-header h1{
     font-size: 5em;
     font-family: 'Bebas Neue', cursive;
     font-weight: normal;
     color: var(--logo);
-    border: yellow 1px solid;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);;
+   /* border: yellow 1px solid;*/
   }
   .nav-toggle {
     font-size: 3rem;
@@ -88,12 +89,12 @@ a{
     border-color: transparent;
     transition: var(--transition);
     cursor: pointer;
-    border: yellow 1px solid;
+   /* border: yellow 1px solid;*/
   }
   .nav-toggle:hover {
     color: var(--font-color);
     transform: rotate(90deg);
-    border: yellow 1px solid;
+   /* border: yellow 1px solid;*/
   }
 
 
@@ -107,22 +108,22 @@ a{
     display: block;
     padding: 0.5rem 1rem;
     transition: var(--transition);
-    border: yellow 1px solid;
+   /* border: yellow 1px solid;*/
   }
   .links a:hover {
     color: var(--font-color);
     padding-left: 1.5rem;
-    border: yellow 1px solid;
+   /* border: yellow 1px solid;*/
   }
   .links {
     height: 0;
     overflow: hidden;
     transition: var(--transition);
-    border: yellow 1px solid;
+   /* border: yellow 1px solid;*/
   }
   .show-links {
     height: 15rem;
-    border: yellow 1px solid;
+   /* border: yellow 1px solid;*/
   }
   
   @media screen and (min-width: 800px) {
@@ -170,7 +171,7 @@ main{
     background-size: cover;
     color: var(--font-color);
     font-size: 16px;
-    border: yellow 1px solid;
+   /* border: yellow 1px solid;*/
 }
 .main-description--container{
     margin: 0em 1em 1em;
@@ -193,7 +194,6 @@ main{
 .main-movie .button i{
     margin-right: 1.25em;
 }
-/*? ---- ---- ---- ---- Video ---- ---- ---- ---- */
 
 .video video{
     width: 250px;
@@ -212,7 +212,7 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: yellow 1px solid;
+   /* border: yellow 1px solid;*/
 }
 .container-title-controls .pointmark button{
     background: var(--font-color);
@@ -230,7 +230,7 @@ main{
 /*? ---- ---- ---- ---- Main container and arrows ---- ---- ---- ---- */
 .recommended-movies{
     padding: 3em;
-    border: yellow 1px solid;
+   /* border: yellow 1px solid;*/
 }
 
 .recommended-movies .container{
@@ -274,7 +274,7 @@ main{
     padding: 20px 0;
     overflow: hidden;
     scroll-behavior: smooth;
-    border: yellow 1px solid;
+   /* border: yellow 1px solid;*/
 }
 .carrousel-container .carrousel{
     display: flex;
@@ -328,14 +328,14 @@ main{
 .form{
     padding: 15px 10px;
     margin: 0em 2em 1em 2em;
-    border: yellow 1px solid;
+   /* border: yellow 1px solid;*/
 }
 .form1--movies-container h2{
     font-size: 5em;
     font-family: 'Bebas Neue', cursive;
     font-weight: normal;
     color: var(--logo);
-    border: yellow 1px solid;
+   /* border: yellow 1px solid;*/
 }
 
 .form1--movies-container__form-group{
@@ -343,7 +343,7 @@ main{
     padding: 1em;
     display: inline-grid;
     justify-content: center;
-    border: yellow 1px solid;
+   /* border: yellow 1px solid;*/
 }
 label{
     display: inline-block;
@@ -371,5 +371,5 @@ footer{
     font-size: 2em;
     color: #FFF;
     background-color: var(--logo);
-    border: yellow 1px solid;
+   /* border: yellow 1px solid;*/
 }
