@@ -374,6 +374,14 @@ label{
 }
 
 
+
+#zonadatos{
+    border:1px solid rgb(240, 235, 235); 
+    width:500px; 
+    min-height:200px;
+}
+
+
 /*? ---- ---- ---- ---- Footer---- ---- ---- ---- */
 footer{
     padding: 0.5em;

@@ -206,22 +206,30 @@
                 <form class="form1--movies-container__form-group">
                     <div class="group1">
                         <label>Title</label>
-                        <input type="text" name="name" pattern="[A-Za-z]" placeholder="Enter title">
+                        <input type="text" name="title" pattern="[A-Za-z]" placeholder="Enter title">
                     </div>
 
                     <div class="group2">
                         <label>Genre</label>
-                        <input type="text" name="autor" pattern="[A-Za-z]" placeholder="Enter genre">
+                        <input type="text" name="genre" pattern="[A-Za-z]" placeholder="Enter genre">
                     </div>    
 
                     <div class="group3">
                         <label>Year</label>
-                        <input type="number" name="año" placeholder="Enter year">
+                        <input type="text" name="year" maxlength="4" pattern="[0-9\-]+" placeholder="Enter year">
                     </div>  
 
                     <div class="form--button">
-                        <button role="button" class="button buttonGlobal" type="submit"><i class="fab fa-avianex"></i>SEND</button>
+                        <button id="recording" class="button buttonGlobal" value="submit"><i class="fab fa-avianex"></i>SEND</button>
                     </div> 
+
+
+
+                    <h1>Zona datos</h1>
+                <div id="zonadatos"></div><br>
+
+                <input type="button" id="recuperar" value="RecuperarDatos"><br><br>
+
                 </form>
         </section>
    </main>
@@ -236,5 +244,6 @@
 
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/indexedDB.js"></script>
 </body>
 </html>
