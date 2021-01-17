@@ -42,8 +42,7 @@ a {
   border-radius: 0.31em;
   padding: 1em;
   color: #fff;
-  margin-top: 1em;
-  margin-right: 1.25em;
+  margin: 1em;
   cursor: pointer;
   transition: 0.3s ease all;
   font-size: 1.12em;
@@ -167,7 +166,7 @@ main {
 }
 .main-description--container--title {
   font-size: 3.12em;
-  margin-bottom: 0.4em;
+  margin: 0.4em;
   text-shadow: var(--text-shadow);
 }
 .main-movie .descripton p {
@@ -186,8 +185,7 @@ main {
 }
 
 .video video {
-  width: 250px;
-  margin: 0.5em;
+  margin: 1em;
   height: 150px;
 }
 /*? ---- ---- ---- ---- INFO ---- ---- ---- ---- */
@@ -338,7 +336,7 @@ main {
   padding: 1em;
   display: inline-grid;
   justify-content: center;
-  /* border: yellow 1px solid;*/
+  border: yellow 1px solid;
 }
 label {
   display: inline-block;
@@ -365,7 +363,13 @@ label {
   margin: 0em 2em 1em 2em;
   border: yellow 1px solid;
 }
-
+.data-container {
+  margin: 5px 5px;
+  padding: 1em;
+  display: inline-grid;
+  justify-content: center;
+  border: yellow 1px solid;
+}
 .dataShow h2 {
   font-size: 5em;
   font-family: "Bebas Neue", cursive;

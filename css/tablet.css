@@ -1,35 +1,49 @@
-header .logo{
-    margin-bottom: 10px;
-    font-size: 30px;
+header .logo {
+  margin-bottom: 10px;
+  font-size: 30px;
 }
 
 /*?----- Links ------*/
 
-
-.main-movie{
-    font-size: 14px;
+.main-movie {
+  font-size: 14px;
 }
-.main-movie .main-description{
-    max-width: 100%;
+.main-movie .main-description {
+  max-width: 100%;
+}
+@media screen and (max-width: 400px) {
+  .main-description--container {
+    padding: 0.5em;
+    display: inline-grid;
+    justify-content: center;
+    margin: 0.5em;
+    border: yellow 1px solid;
+  }
 }
 /*?------------ Carrousel -------*/
-.principal-container .carrousel-container{
-    overflow: visible;
+.principal-container .carrousel-container {
+  overflow: visible;
 }
-.principal-container .carrousel-container .carrousel{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.principal-container .carrousel-container .carrousel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 .recommended-movies .pointmark,
 .recommended-movies .left-arrow,
-.recommended-movies .right-arrow{
-    display: none;
+.recommended-movies .right-arrow {
+  display: none;
 }
 /*?--------------form---------*/
-.form--button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.form--button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*?---------- List Area ---------*/
+.list-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /*?------NAV---------*/
