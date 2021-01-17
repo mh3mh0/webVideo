@@ -2,14 +2,14 @@ var bd;
 
 function iniciar(){
     var boton = document.getElementById('recording');
-    var recuperar = document.getElementById('recuperar');
+    var recovery = document.getElementById('recovery');
     var deleteKey = document.getElementById('deleteKey');
     var showKey = document.getElementById('showKey');
     var deleteAll = document.getElementById('deleteAll');
 
     /*showKey.addEventListener('click', recuperarClave, false);*/
     boton.addEventListener('click', agregarObjeto, false);
-    recuperar.addEventListener('click', recuperarDatos, false);
+    recovery.addEventListener('click', dataRecovery, false);
     /*deleteKey.addEventListener('click', borrarClave, false);*/
     /*deleteAll.addEventListener('click', borrarTodo, false);*/
 
@@ -38,46 +38,19 @@ function agregarObjeto(){
     return false;
 }
 
-function recuperarDatos(){
-    var zonadatos = document.getElementById('zonadatos');
-    zonadatos.innerHTML = '';
+function dataRecovery(){
+    var dataShown = document.getElementById('dataShown');
+    dataShown.innerHTML = '';
     var customerObjectStore = bd.transaction('movies', "readwrite").objectStore('movies');
     customerObjectStore.openCursor().onsuccess = function(event){
         var cursor = event.target.result;
         if(cursor){
-            zonadatos.innerHTML += "TITLE: " + cursor.value.title + " --- GENRE: " + cursor.value.genre + " - YEAR: " + cursor.value.year + "<br>";
+            dataShown.innerHTML += "TITLE: " + cursor.value.title + " --- GENRE: " + cursor.value.genre + " - YEAR: " + cursor.value.year + "<br>";
             cursor.continue();
         }else{
         }
     };
     return false;
 }
-
-/*function borrarClave(){
-    var isbn = document.getElementsByName('deleteISBN')[0].value;
-    var customerObjectStore = bd.transaction('movies', "readwrite").objectStore('movies');
-    var request = customerObjectStore.delete(isbn);
-    request.onsuccess = function(event){
-        alert('Registro borrado en la base de datos');
-    };
-    return false;
-}
-
-function borrarTodo(){
-    var request = bd.transaction('movies', "readwrite").objectStore('movies');
-    var customerObjectStore = bd.transaction('movies', "readwrite").objectStore('movies');
-    customerObjectStore.openCursor().onsuccess = function(event){
-        var cursor = event.target.result; 
-        if(cursor){
-            customerObjectStore.delete(cursor.value.isbn);
-            cursor.continue();
-        }else{
-            alert('Todo borrado!');
-        }
-    };
-    return false;
-
-}*/
-
 
 window.addEventListener('load', iniciar, false);
