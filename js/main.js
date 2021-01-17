@@ -71,21 +71,24 @@ queue.addEventListener('mouseleave', () => {
 
 //?--------------------- VideoPlay -----------------------
 window.playPause = function(){
-document.getElementById("button").onclick = function(){
     if(document.getElementById("video1").paused){
         document.getElementById("video1").play();
-        this.innerHTML ="Pause";
+        document.getElementById("button").innerHTML = "Pause";
         }else{
             document.getElementById("video1").pause();
-            this.innerHTML = "Play";
+            document.getElementById("button").innerHTML = "Play";
         }
     }
-}
 //?------------- INFOButton ----------------------*/
 function showHide_Info(show){
     if (document.getElementById){ 
         var el = document.getElementById(show);
-        el.style.display = (el.style.display == 'none') ? 'block' : 'none'; 
+        /*el.style.display = (el.style.display == 'none') ? 'block' : 'none';*/
+        if(el.style.display == 'none') {
+            el.style.display = 'block' 
+           } else {
+            el.style.display = 'none'; 
+           }
     }
 }
 window.onload = function(){
