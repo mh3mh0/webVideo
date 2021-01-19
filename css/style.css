@@ -181,8 +181,31 @@ main {
   margin: 1em;
   height: 150px;
 }
-/*? ---- ---- ---- ---- INFO ---- ---- ---- ---- */
+/*? ---- ---- ---- ---- Podcast ---- ---- ---- ---- */
 
+.audio-container {
+  margin-bottom: 3.12em;
+  display: flex;
+  align-items: flex-end;
+  min-height: 40em;
+  background: linear-gradient(rgba(81, 78, 78, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
+    url(../imgs/conan.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+.audio-container .podcast {
+  font-size: 5em;
+  font-family: "Bebas Neue", cursive;
+  font-weight: normal;
+  color: var(--logo);
+  text-shadow: var(--text-shadow);
+}
+audio {
+  display: inline-flex;
+  justify-content: right;
+  width: 28em;
+  height: 5em;
+}
 /*? ---- ---- ---- ---- Title container and controls-pointmark ---- ---- ---- ---- */
 .recommended-movies p {
   color: var(--font-color);
@@ -310,10 +333,12 @@ main {
 }
 
 /*? ---- ---- ---- ---- Form1-movie ---- ---- ---- ---- */
+
 .form {
+  align-items: flex-end;
   padding: 15px 10px;
-  margin: 0em 2em 1em 2em;
-  /* border: yellow 1px solid;*/
+  margin: 0em 1em 1em;
+  /*border: yellow 1px solid;*/
 }
 .form1--movies-container h2 {
   font-size: 5em;
@@ -325,11 +350,9 @@ main {
 }
 
 .form1--movies-container__form-group {
-  margin: 5px 5px;
   padding: 1em;
-  display: inline-grid;
   justify-content: center;
-  border: yellow 1px solid;
+  /*border: yellow 1px solid;*/
 }
 label {
   display: inline-block;
@@ -352,22 +375,20 @@ label {
 
 /*? ---- ---- ---- ---- DataArea---- ---- ---- ---- */
 .data-area {
+  align-items: flex-end;
   padding: 15px 10px;
-  margin: 0em 2em 1em 2em;
-  border: yellow 1px solid;
+  margin: 0em 1em 1em;
+  /*border: yellow 1px solid;*/
 }
 .data-container {
-  margin: 5px 5px;
-  padding: 1em;
-  display: inline-grid;
   justify-content: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1em;
   color: var(--font-color);
-  border: yellow 1px solid;
+  /*border: yellow 1px solid;*/
 }
 
-.dataShow h2 {
+.data-area h2 {
   font-size: 5em;
   font-family: "Bebas Neue", cursive;
   font-weight: normal;

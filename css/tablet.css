@@ -11,13 +11,18 @@ header .logo {
 .main-movie .main-description {
   max-width: 100%;
 }
+
+.form1--movies-container {
+  max-width: 100%;
+}
+
 @media screen and (max-width: 400px) {
   .main-description--container {
     padding: 0.5em;
     display: inline-grid;
     justify-content: center;
     margin: 0.5em;
-    border: yellow 1px solid;
+    /*border: yellow 1px solid;*/
   }
 }
 /*?------------ Carrousel -------*/
@@ -35,15 +40,3 @@ header .logo {
   display: none;
 }
 /*?--------------form---------*/
-.form--button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/*?---------- List Area ---------*/
-.list-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/*?------NAV---------*/
