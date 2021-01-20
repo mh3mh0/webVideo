@@ -8,16 +8,11 @@ header .logo {
 .main-movie {
   font-size: 14px;
 }
-.main-movie .main-description {
-  max-width: 100%;
-}
-
-.form1--movies-container {
-  max-width: 100%;
-}
-
 @media screen and (max-width: 400px) {
-  .main-description--container {
+  .main-description--container,
+  .section__container,
+  .form1--movies-container,
+  .data-area {
     padding: 0.5em;
     display: inline-grid;
     justify-content: center;

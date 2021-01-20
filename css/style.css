@@ -182,29 +182,23 @@ main {
   height: 150px;
 }
 /*? ---- ---- ---- ---- Podcast ---- ---- ---- ---- */
-
-.audio-container {
+.section {
   margin-bottom: 3.12em;
   display: flex;
   align-items: flex-end;
-  min-height: 40em;
-  background: linear-gradient(rgba(81, 78, 78, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
-    url(../imgs/conan.jpg);
+  min-height: 10em;
+  background: url(../imgs/conan.jpg);
   background-position: center center;
   background-size: cover;
-}
-.audio-container .podcast {
-  font-size: 5em;
-  font-family: "Bebas Neue", cursive;
-  font-weight: normal;
-  color: var(--logo);
+  color: var(--font-color);
+  font-size: 4em;
   text-shadow: var(--text-shadow);
 }
-audio {
-  display: inline-flex;
-  justify-content: right;
-  width: 28em;
-  height: 5em;
+.section__container {
+  margin: 0em 1em 1em;
+}
+.section__title {
+  margin-bottom: 1em;
 }
 /*? ---- ---- ---- ---- Title container and controls-pointmark ---- ---- ---- ---- */
 .recommended-movies p {
