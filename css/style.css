@@ -24,7 +24,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 70%;
   font-family: "Open Sans", sans-serif;
   background: var(--background);
   scroll-behavior: smooth;
@@ -158,9 +158,9 @@ main {
   background-position: center center;
   background-size: cover;
   color: var(--font-color);
-  font-size: 16px;
+  font-size: 100%;
   text-shadow: var(--text-shadow);
-  /* border: yellow 1px solid;*/
+  border: yellow 1px solid;
 }
 .main-description--container {
   margin: 0em 1em 1em;
@@ -183,7 +183,7 @@ main {
 }
 /*? ---- ---- ---- ---- Podcast ---- ---- ---- ---- */
 .section {
-  margin-bottom: 3.12em;
+  margin-bottom: 0.5em;
   display: flex;
   align-items: flex-end;
   min-height: 10em;
@@ -328,25 +328,26 @@ main {
 
 /*? ---- ---- ---- ---- Form1-movie ---- ---- ---- ---- */
 
-.form {
-  align-items: flex-end;
+.form__container {
+  display: grid;
+  align-items: center;
+  min-height: 10em;
+  margin: 0em 1em 1em;
+  font-size: 100%;
   padding: 15px 10px;
   margin: 0em 1em 1em;
-  /*border: yellow 1px solid;*/
+  border: yellow 1px solid;
 }
-.form1--movies-container h2 {
+.form__container {
+  margin: 0em 1em 1em;
+}
+.form__container h2 {
   font-size: 5em;
   font-family: "Bebas Neue", cursive;
   font-weight: normal;
   color: var(--logo);
   text-shadow: var(--text-shadow);
   /* border: yellow 1px solid;*/
-}
-
-.form1--movies-container__form-group {
-  padding: 1em;
-  justify-content: center;
-  /*border: yellow 1px solid;*/
 }
 label {
   display: inline-block;
@@ -360,29 +361,37 @@ label {
   background: var(--font-color);
   color: #000;
 }
-.form .form--button i {
+.form__container--button i {
   margin-right: 1.25em;
 }
-.form1 .form--button {
-  display: block;
+.form__container--group input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--font-color-second);
+  border-radius: 25px;
+  color: var(--font-color);
+  font-family: "Bebas Neue", cursive;
+  font-size: 16px;
+  height: 50px;
+  padding: 0px 20px;
+  width: 70%;
 }
 
 /*? ---- ---- ---- ---- DataArea---- ---- ---- ---- */
-.data-area {
-  align-items: flex-end;
+.section__data--container {
+  display: grid;
+  align-items: center;
+  min-height: 10em;
+  margin: 0em 1em 1em;
+  font-size: 100%;
   padding: 15px 10px;
   margin: 0em 1em 1em;
-  /*border: yellow 1px solid;*/
+  border: yellow 1px solid;
 }
-.data-container {
-  justify-content: center;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 1em;
-  color: var(--font-color);
-  /*border: yellow 1px solid;*/
+.form__container {
+  margin: 0em 1em 1em;
 }
 
-.data-area h2 {
+.section__data--container h2 {
   font-size: 5em;
   font-family: "Bebas Neue", cursive;
   font-weight: normal;
@@ -393,16 +402,12 @@ label {
   background: var(--font-color);
   color: #000;
 }
-.data-area .list-button i {
+.section__data--button i {
   margin-right: 1.25em;
 }
-.data-area .dataShown {
-  display: block;
-}
-
 /*? ---- ---- ---- ---- Footer---- ---- ---- ---- */
 footer {
-  padding: 0.5em;
+  position: 100%;
   text-align: center;
   font-size: 2em;
   color: #fff;

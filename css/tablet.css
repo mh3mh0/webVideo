@@ -8,18 +8,6 @@ header .logo {
 .main-movie {
   font-size: 14px;
 }
-@media screen and (max-width: 400px) {
-  .main-description--container,
-  .section__container,
-  .form1--movies-container,
-  .data-area {
-    padding: 0.5em;
-    display: inline-grid;
-    justify-content: center;
-    margin: 0.5em;
-    /*border: yellow 1px solid;*/
-  }
-}
 /*?------------ Carrousel -------*/
 .principal-container .carrousel-container {
   overflow: visible;
@@ -34,4 +22,14 @@ header .logo {
 .recommended-movies .right-arrow {
   display: none;
 }
-/*?--------------form---------*/
+/*?-------------- @media ---------*/
+@media screen and (max-width: 400px) {
+  /*.main-description--container,
+  .section__container,
+  .form__container,
+  .section__data--container*/
+  main {
+    display: inline-grid;
+    justify-content: center;
+  }
+}
