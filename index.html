@@ -1,263 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="webVideo" content="List of movies to watch">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="webVideo" content="List of movies to watch" />
     <title>webVideo</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/tablet.css" media="(max-width: 800px)">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/tablet.css" media="(max-width: 800px)" />
+  </head>
+  <body>
     <nav>
-        <div class="nav-center">
+      <div class="nav-center">
+        <!-- nav header -->
+        <div class="nav-header">
+          <header>
+            <h1>webVideo</h1>
+          </header>
+          <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <!-- links -->
+        <ul class="links">
+          <li><a href="#" class="link">Start</a></li>
+          <li><a href="#carrousel" class="link">Movies</a></li>
+          <li><a href="#" class="link">New Movies</a></li>
+          <li><a href="#form" class="link">List</a></li>
+        </ul>
+      </div>
+    </nav>
 
-          <!-- nav header -->
-          <div class="nav-header">
-            <header>
-                <h1>webVideo</h1>
-            </header>
-            <button class="nav-toggle">
-              <i class="fas fa-bars"></i>
+    <main>
+      <section class="main-container">
+        <article class="main-movie">
+          <div class="main-description--container">
+            <h3 class="main-description--container--title">Interestellar</h3>
+
+            <div class="video">
+              <video id="video1">
+                <source src="./videos/interstellar.mp4" type="video/mp4" />
+                Your browswer does not support videos on HTML5
+              </video>
+            </div>
+
+            <div id="infoMovie" class="resume">
+              <p class="main-description">
+                The adventures of a group of explorers who make use of a newly
+                discovered wormhole to surpass the limitations on human space
+                travel and conquer the vast distances involved in an
+                interstellar voyage.
+              </p>
+            </div>
+
+            <button
+              id="button"
+              class="button buttonGlobal"
+              onclick="playPause()"
+            >
+              <i class="far fa-play-circle"></i>PLAY
+            </button>
+            <button
+              id="show"
+              class="button buttonGlobal"
+              onclick="showHide_Info('infoMovie')"
+            >
+              <i class="fas fa-info-circle"></i>INFO
             </button>
           </div>
-          <!-- links -->
-          <ul class="links">
-            <li><a href="#" class="link">Start</a></li>
-            <li><a href="#carrousel" class="link">Movies</a></li>
-            <li><a href="#" class="link">New Movies</a></li>
-            <li><a href="#form" class="link">List</a></li>
-          </ul>
+        </article>
+      </section>
 
+      <section class="section">
+        <div class="section__container">
+          <h3 class="section__title">Podcast:</h3>
+          <div class="section__container--player">
+            <iframe
+              src="https://omny.fm/shows/conan-o-brien-needs-a-friend/anthony-anderson/embed"
+              width="100%"
+              height="180px"
+              frameborder="0"
+            >
+            </iframe>
+          </div>
         </div>
-      </nav>
+      </section>
 
-   <main>
-        <section class="main-container">
-            <article class="main-movie">
-                <div class="main-description--container">
-                    <h3 class="main-description--container--title">Interestellar</h3>
+      <section id="list">
+        <article class="recommended-movies">
+          <div class="container-title-controls">
+            <p>Recomended Movies</p>
+            <div class="pointmark"></div>
+          </div>
 
-                    <div class="video">
-                        <video id="video1">
-                            <source src="./videos/interstellar.mp4" type="video/mp4">
-                                Your browswer does not support videos on HTML5
-                        </video>
-                    </div>
-
-                    <div id="infoMovie" class="resume">
-                        <p class="main-description">
-                        The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.
-                        </p>
-                    </div>
-
-                    <button id="button" class="button buttonGlobal" onclick="playPause()"><i class="far fa-play-circle"></i>PLAY</button>
-                    <button id="show" class="button buttonGlobal" onclick="showHide_Info('infoMovie')"><i class="fas fa-info-circle"></i>INFO</button>
-                </div>
-
-            </article>
-        </section>
-
-        <section class="section">
-            <div class="section__container">
-                <h3 class="section__title">Podcast:</h3>
-                <div class="section__container--player">
-                    <iframe src="https://omny.fm/shows/conan-o-brien-needs-a-friend/anthony-anderson/embed" width="100%" height="180px" frameborder="0">
-                    </iframe>
-                </div>
+          <div id="carrousel" class="principal-container">
+            <button role="button" id="leftArrow" class="left-arrow">
+              <i class="fas fa-angle-left"></i>
+            </button>
+            <div class="carrousel-container">
+              <div class="carrousel">
+                <figure class="movie">
+                  <img src="./imgs/1.png" alt="Interestellar" />
+                  <figcaption class="cover">
+                    <p>Interestellar</p>
+                  </figcaption>
+                </figure>
+                <figure class="movie">
+                  <img src="./imgs/2.png" alt="The-martian" />
+                  <figcaption class="cover">
+                    <p>The Martian</p>
+                  </figcaption>
+                </figure>
+                <figure class="movie">
+                  <img src="./imgs/3.png" alt="X-men" />
+                  <figcaption class="cover">
+                    <p>X-Men</p>
+                  </figcaption>
+                </figure>
+                <figure class="movie">
+                  <img src="./imgs/4.png" alt="Top-Gun" />
+                  <figcaption class="cover">
+                    <p>Top Gun is a 1986 American action drama film</p>
+                  </figcaption>
+                </figure>
+                <figure class="movie">
+                  <img src="./imgs/5.png" alt="Tron" />
+                  <figcaption class="cover">
+                    <p>
+                      Tron is a 1982 American science fiction action-adventure
+                      film.
+                    </p>
+                  </figcaption>
+                </figure>
+                <figure class="movie">
+                  <img src="./imgs/6.png" alt="Batman" />
+                  <figcaption class="cover">
+                    <p>
+                      Batman was created by artist Bob Kane and debuted on March
+                      30, 1939.
+                    </p>
+                  </figcaption>
+                </figure>
+                <figure class="movie">
+                  <img src="./imgs/7.png" alt="Wolf" />
+                  <figcaption class="cover">
+                    <p>Wolf is a 1994 American romantic horror film.</p>
+                  </figcaption>
+                </figure>
+                <figure class="movie">
+                  <img src="./imgs/8.png" alt="Greenland" />
+                  <figcaption class="cover">
+                    <p>Greenland is a 2020 American disaster film.</p>
+                  </figcaption>
+                </figure>
+                <figure class="movie">
+                  <img src="./imgs/9.png" alt="Evangelion" />
+                  <figcaption class="cover">
+                    <p>
+                      The phrase Evangelion movie could refer to any one of
+                      seven films.
+                    </p>
+                  </figcaption>
+                </figure>
+                <figure class="movie">
+                  <img src="./imgs/10.png" alt="Heavenquest" />
+                  <figcaption class="cover">
+                    <p>
+                      Heavenquest is a 2020, reimagined fantasy universe
+                      inspired by the world.
+                    </p>
+                  </figcaption>
+                </figure>
+                <figure class="movie">
+                  <img src="./imgs/11.png" alt="Cops-and-robbers" />
+                  <figcaption class="cover">
+                    <p>
+                      Cops and Robbers. Insight from Jada Pinkett Smith and the
+                      Directors.
+                    </p>
+                  </figcaption>
+                </figure>
+                <figure class="movie">
+                  <img src="./imgs/12.png" alt="Mortal" />
+                  <figcaption class="cover">
+                    <p>
+                      Mortal is a 2020 English-language Norwegian fantasy action
+                      film.
+                    </p>
+                  </figcaption>
+                </figure>
+                <figure class="movie">
+                  <img src="./imgs/13.png" alt="Jiu-jitsu" />
+                  <figcaption class="cover">
+                    <p>
+                      Jiu Jitsu is a 2020 American science fiction martial arts
+                      film.
+                    </p>
+                  </figcaption>
+                </figure>
+                <figure class="movie">
+                  <img src="./imgs/14.png" alt="Tenet" />
+                  <figcaption class="cover">
+                    <p>Tenet is a 2020 science fiction action-thriller film.</p>
+                  </figcaption>
+                </figure>
+                <figure class="movie">
+                  <img src="./imgs/15.png" alt="Mosters-of-man" />
+                  <figcaption class="cover">
+                    <p>Monsters and Men is a 2018 American drama film.</p>
+                  </figcaption>
+                </figure>
+                <figure class="movie">
+                  <img src="./imgs/16.png" alt="Mosters-of-man" />
+                  <figcaption class="cover">
+                    <p>
+                      The Midnight Sky is a 2020 American science fiction film.
+                    </p>
+                  </figcaption>
+                </figure>
+                <figure class="movie">
+                  <img src="./imgs/17.png" alt="Wander" />
+                  <figcaption class="cover">
+                    <p>Wander is a 2020 American thriller film.</p>
+                  </figcaption>
+                </figure>
+                <figure class="movie">
+                  <img src="./imgs/18.png" alt="Honest-Thief" />
+                  <figcaption class="cover">
+                    <p>Honest Thief is a 2020 American action-thriller film.</p>
+                  </figcaption>
+                </figure>
+                <figure class="movie">
+                  <img src="./imgs/19.png" alt="Battlefield" />
+                  <figcaption class="cover">
+                    <p>
+                      Battleship is a 2012 American military science fiction
+                      action film.
+                    </p>
+                  </figcaption>
+                </figure>
+                <figure class="movie">
+                  <img src="./imgs/20.png" alt="Joker" />
+                  <figcaption class="cover">
+                    <p>Joker is a 2019 American psychological thriller film.</p>
+                  </figcaption>
+                </figure>
+              </div>
             </div>
-        </section>
+            <button role="button" id="rightArrow" class="right-arrow">
+              <i class="fas fa-angle-right"></i>
+            </button>
+          </div>
+        </article>
+      </section>
 
-        <section id="list">
-            <article class="recommended-movies">
-                <div class="container-title-controls">
-                    <p>Recomended Movies</p>
-                    <div class="pointmark"></div>
-                </div>
+      <section id="form" class="form__container">
+        <h2>Add Movie:</h2>
+        <form class="form__container--group">
+          <div class="group1">
+            <label>Title</label>
+            <input
+              type="text"
+              name="title"
+              pattern="[A-Za-z]"
+              placeholder="Enter title"
+            />
+          </div>
 
-                <div id="carrousel" class="principal-container">
-                    <button role="button" id="leftArrow" class="left-arrow"><i class="fas fa-angle-left"></i></button>
-                            <div class="carrousel-container">
-                                <div class="carrousel">
+          <div class="group2">
+            <label>Genre</label>
+            <input
+              type="text"
+              name="genre"
+              pattern="[A-Za-z]"
+              placeholder="Enter genre"
+            />
+          </div>
 
-                                    <figure class="movie">
-                                        <img src="./imgs/1.png" alt="Interestellar">
-                                        <figcaption class="cover">
-                                            <p>Interestellar</p>
-                                        </figcaption>    
-                                    </figure>
-                                    <figure class="movie">
-                                        <img src="./imgs/2.png" alt="The-martian">
-                                        <figcaption class="cover">
-                                            <p>The Martian</p>
-                                        </figcaption>    
-                                    </figure>
-                                    <figure class="movie">
-                                        <img src="./imgs/3.png" alt="X-men">
-                                        <figcaption class="cover">
-                                            <p>X-Men</p>
-                                        </figcaption>
-                                    </figure>
-                                    <figure class="movie">
-                                        <img src="./imgs/4.png" alt="Top-Gun">
-                                        <figcaption class="cover">
-                                            <p>Top Gun is a 1986 American action drama film</p>
-                                        </figcaption>
-                                    </figure>
-                                    <figure class="movie">
-                                        <img src="./imgs/5.png" alt="Tron">
-                                        <figcaption class="cover">
-                                            <p>Tron is a 1982 American science fiction action-adventure film.</p>
-                                        </figcaption>
-                                    </figure>
-                                    <figure class="movie">
-                                        <img src="./imgs/6.png" alt="Batman">
-                                        <figcaption class="cover">
-                                            <p>Batman was created by artist Bob Kane and debuted on March 30, 1939.</p>
-                                        </figcaption>
-                                    </figure>
-                                    <figure class="movie">
-                                        <img src="./imgs/7.png" alt="Wolf">
-                                        <figcaption class="cover">
-                                            <p>Wolf is a 1994 American romantic horror film.</p>
-                                        </figcaption>
-                                    </figure>
-                                    <figure class="movie">
-                                        <img src="./imgs/8.png" alt="Greenland">
-                                        <figcaption class="cover">
-                                            <p>Greenland is a 2020 American disaster film.</p>
-                                        </figcaption>
-                                    </figure>
-                                    <figure class="movie">
-                                        <img src="./imgs/9.png" alt="Evangelion">
-                                        <figcaption class="cover">
-                                            <p>The phrase Evangelion movie could refer to any one of seven films.</p>
-                                        </figcaption>
-                                    </figure>
-                                    <figure class="movie">
-                                        <img src="./imgs/10.png" alt="Heavenquest">
-                                        <figcaption class="cover">
-                                            <p>Heavenquest is a 2020, reimagined fantasy universe inspired by the world.</p>
-                                        </figcaption>
-                                    </figure>
-                                    <figure class="movie">
-                                        <img src="./imgs/11.png" alt="Cops-and-robbers">
-                                        <figcaption class="cover">
-                                            <p>Cops and Robbers. Insight from Jada Pinkett Smith and the Directors.</p>
-                                        </figcaption>
-                                    </figure>
-                                    <figure class="movie">
-                                        <img src="./imgs/12.png" alt="Mortal">
-                                        <figcaption class="cover">
-                                            <p>Mortal is a 2020 English-language Norwegian fantasy action film.</p>
-                                        </figcaption>
-                                    </figure>
-                                    <figure class="movie">
-                                        <img src="./imgs/13.png" alt="Jiu-jitsu">
-                                        <figcaption class="cover">
-                                            <p>Jiu Jitsu is a 2020 American science fiction martial arts film.</p>
-                                        </figcaption>
-                                    </figure>
-                                    <figure class="movie">
-                                        <img src="./imgs/14.png" alt="Tenet">
-                                        <figcaption class="cover">
-                                            <p>Tenet is a 2020 science fiction action-thriller film.</p>
-                                        </figcaption>
-                                    </figure>
-                                    <figure class="movie">
-                                        <img src="./imgs/15.png" alt="Mosters-of-man">
-                                        <figcaption class="cover">
-                                            <p>Monsters and Men is a 2018 American drama film.</p>
-                                        </figcaption>
-                                    </figure>
-                                    <figure class="movie">
-                                        <img src="./imgs/16.png" alt="Mosters-of-man">
-                                        <figcaption class="cover">
-                                            <p>The Midnight Sky is a 2020 American science fiction film.</p>
-                                        </figcaption>
-                                    </figure>
-                                    <figure class="movie">
-                                        <img src="./imgs/17.png" alt="Wander">
-                                        <figcaption class="cover">
-                                            <p>Wander is a 2020 American thriller film.</p>
-                                        </figcaption>
-                                    </figure>
-                                    <figure class="movie">
-                                        <img src="./imgs/18.png" alt="Honest-Thief">
-                                        <figcaption class="cover">
-                                            <p>Honest Thief is a 2020 American action-thriller film.</p>
-                                        </figcaption>
-                                    </figure>
-                                    <figure class="movie">
-                                        <img src="./imgs/19.png" alt="Battlefield">
-                                        <figcaption class="cover">
-                                            <p>Battleship is a 2012 American military science fiction action film.</p>
-                                        </figcaption>
-                                    </figure>
-                                    <figure class="movie">
-                                        <img src="./imgs/20.png" alt="Joker">
-                                        <figcaption class="cover">
-                                            <p>Joker is a 2019 American psychological thriller film.</p>
-                                        </figcaption>
-                                    </figure>
+          <div class="group3">
+            <label>Year</label>
+            <input
+              type="text"
+              name="year"
+              maxlength="4"
+              pattern="[0-9\-]+"
+              placeholder="Enter year"
+            />
+          </div>
 
-                
-                                </div>
-                            </div>
-                    <button role="button" id="rightArrow" class="right-arrow"><i class="fas fa-angle-right"></i></button>
-                </div>
-            </article>
-        </section>
+          <div class="form__container--button">
+            <button id="recording" class="button buttonGlobal" value="submit">
+              <i class="fab fa-avianex"></i>SEND
+            </button>
+          </div>
+        </form>
+      </section>
 
-        <section id="form"  class="form__container">
-                <h2>Add Movie:</h2>
-                <form class="form__container--group">
-                    <div class="group1">
-                        <label>Title</label>
-                        <input type="text" name="title" pattern="[A-Za-z]" placeholder="Enter title">
-                    </div>
+      <section id="data-area" class="section__data--container">
+        <h2>List Area:</h2>
+        <div class="section__data--area">
+          <div id="dataShown"></div>
 
-                    <div class="group2">
-                        <label>Genre</label>
-                        <input type="text" name="genre" pattern="[A-Za-z]" placeholder="Enter genre">
-                    </div>    
-
-                    <div class="group3">
-                        <label>Year</label>
-                        <input type="text" name="year" maxlength="4" pattern="[0-9\-]+" placeholder="Enter year">
-                    </div>  
-
-                    <div class="form__container--button">
-                        <button id="recording" class="button buttonGlobal" value="submit"><i class="fab fa-avianex"></i>SEND</button>
-                    </div>
-                </form>
-        </section>
-
-        <section id="data-area" class="section__data--container">
-            <h2>List Area:</h2>
-            <div class="section__data--area">
-                <div id="dataShown">
-                </div>
-                
-                <div class="section__data--button">
-                    <button id="recovery" class="button buttonGlobal" value="dataRecovery"><i class="fas fa-list-ul"></i>LIST</button>
-                </div>
-            </div>
-        </section>
-   </main>
+          <div class="section__data--button">
+            <button
+              id="recovery"
+              class="button buttonGlobal"
+              value="dataRecovery"
+            >
+              <i class="fas fa-list-ul"></i>LIST
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer id="footer">
-        <div class="footer-container">
-            <p>
-                CopyRights &copy;
-            </p>
-        </div>
-    </footer>       
+      <div class="footer-container">
+        <p>CopyRights &copy;</p>
+      </div>
+    </footer>
 
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/2c36e9b7b1.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/main.js"></script>
     <script src="./js/indexedDB.js"></script>
-</body>
+  </body>
 </html>

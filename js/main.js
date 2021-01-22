@@ -4,7 +4,7 @@ const navToggle = document.querySelector(".nav-toggle");
 const links = document.querySelector(".links");
 
 navToggle.addEventListener("click", function () {
-  links.classList.toggle("show-links");
+    links.classList.toggle("show-links");
 });
 
 //?--------- Carrousel-arrows ---------*/
@@ -19,7 +19,7 @@ rightArrow.addEventListener('click', () => {
     queue.scrollLeft += queue.offsetWidth;
 
     const indicatorActive = document.querySelector('.pointmark .active');
-    if(indicatorActive.nextSibling){
+    if (indicatorActive.nextSibling) {
         indicatorActive.nextSibling.classList.add('active');
         indicatorActive.classList.remove('active');
     }
@@ -30,7 +30,7 @@ leftArrow.addEventListener('click', () => {
     queue.scrollLeft -= queue.offsetWidth;
 
     const indicatorActive = document.querySelector('.pointmark .active');
-    if(indicatorActive.previousSibling){
+    if (indicatorActive.previousSibling) {
         indicatorActive.previousSibling.classList.add('active');
         indicatorActive.classList.remove('active');
     }
@@ -38,10 +38,10 @@ leftArrow.addEventListener('click', () => {
 
 //? ---- ---- ---- ---- Pages-carrousel ---- ---- ---- ---- 
 const pageNumber = Math.ceil(movies.length / 5);
-for(let i = 0; i < pageNumber; i ++){
+for (let i = 0; i < pageNumber; i++) {
     const indicator = document.createElement('button');
 
-    if(i === 0){
+    if (i === 0) {
         indicator.classList.add('active');
     }
 
@@ -70,28 +70,28 @@ queue.addEventListener('mouseleave', () => {
 })*/
 
 //?--------------------- VideoPlay -----------------------
-window.playPause = function(){
-    if(document.getElementById("video1").paused){
+window.playPause = function () {
+    if (document.getElementById("video1").paused) {
         document.getElementById("video1").play();
         document.getElementById("button").innerHTML = "Pause";
-        }else{
-            document.getElementById("video1").pause();
-            document.getElementById("button").innerHTML = "Play";
-        }
-    }
-//?------------- INFOButton ----------------------*/
-function showHide_Info(show){
-    if (document.getElementById){ 
-        var el = document.getElementById(show);
-        /*el.style.display = (el.style.display == 'none') ? 'block' : 'none';*/
-        if(el.style.display == 'none') {
-            el.style.display = 'block' 
-           } else {
-            el.style.display = 'none'; 
-           }
+    } else {
+        document.getElementById("video1").pause();
+        document.getElementById("button").innerHTML = "Play";
     }
 }
-window.onload = function(){
+//?------------- INFOButton ----------------------*/
+function showHide_Info(show) {
+    if (document.getElementById) {
+        var el = document.getElementById(show);
+        /*el.style.display = (el.style.display == 'none') ? 'block' : 'none';*/
+        if (el.style.display == 'none') {
+            el.style.display = 'block'
+        } else {
+            el.style.display = 'none';
+        }
+    }
+}
+window.onload = function () {
     showHide_Info('infoMovie');
 }
 
