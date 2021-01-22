@@ -33,3 +33,10 @@ header .logo {
     justify-content: center;
   }
 }
+.main-description--container,
+.form__container,
+.section__data--container {
+  display: grid;
+  grid-template-rows: 80px;
+  gap: 0.5em;
+}

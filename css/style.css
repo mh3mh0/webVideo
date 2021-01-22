@@ -40,6 +40,7 @@ a {
   background: rgba(0, 0, 0, 0.5);
   border: none;
   border-radius: 0.31em;
+  outline: none;
   padding: 1em;
   color: #fff;
   margin: 1em;
@@ -78,6 +79,7 @@ main {
   border-color: transparent;
   transition: var(--transition);
   cursor: pointer;
+  outline: none;
   /* border: yellow 1px solid;*/
 }
 .nav-toggle:hover {
@@ -169,6 +171,9 @@ main {
   font-size: 3.12em;
   margin: 0.4em;
 }
+.resume__text {
+  font-size: 1.5em;
+}
 .main-movie .button:hover {
   background: var(--font-color);
   color: #000;
@@ -191,7 +196,7 @@ main {
   background-position: center center;
   background-size: cover;
   color: var(--font-color);
-  font-size: 4em;
+  font-size: 3.12em;
   text-shadow: var(--text-shadow);
 }
 .section__container {
@@ -210,6 +215,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   /* border: yellow 1px solid;*/
 }
 .container-title-controls .pointmark {
@@ -222,6 +228,7 @@ main {
   cursor: pointer;
   border: none;
   margin-right: 2px;
+  outline: none;
 }
 .pointmark button:hover,
 .pointmark button.active {
@@ -230,7 +237,7 @@ main {
 
 /*? ---- ---- ---- ---- Main container and arrows ---- ---- ---- ---- */
 .recommended-movies {
-  padding: 3em;
+  padding: 1em;
   /* border: yellow 1px solid;*/
 }
 
@@ -245,7 +252,7 @@ main {
 .principal-container .left-arrow,
 .principal-container .right-arrow {
   position: absolute;
-  border: none;
+  border-radius: 10px;
   background: rgba(0, 0, 0, 0.3);
   font-size: 40px;
   height: 50%;
@@ -254,6 +261,7 @@ main {
   width: 50px;
   color: var(--font-color);
   cursor: pointer;
+  outline: none;
   z-index: 500;
   transition: 0.2s ease all;
 }
@@ -328,18 +336,13 @@ main {
 
 /*? ---- ---- ---- ---- Form1-movie ---- ---- ---- ---- */
 
-.form__container {
+.form__container form {
   display: grid;
-  align-items: center;
-  min-height: 10em;
-  margin: 0em 1em 1em;
+  grid-template-rows: 80px 80px 80px 80px;
+  gap: 0.5em;
   font-size: 100%;
-  padding: 15px 10px;
   margin: 0em 1em 1em;
   border: yellow 1px solid;
-}
-.form__container {
-  margin: 0em 1em 1em;
 }
 .form__container h2 {
   font-size: 5em;
@@ -351,10 +354,10 @@ main {
 }
 label {
   display: inline-block;
-  width: 50px;
+  width: 100px;
   margin: 0.1em;
   color: var(--font-color-second);
-  font-size: 1.5em;
+  font-size: 2em;
   text-shadow: var(--text-shadow);
 }
 .form .button:hover {
@@ -368,10 +371,11 @@ label {
   background-color: rgba(255, 255, 255, 0.1);
   border: 2px solid var(--font-color-second);
   border-radius: 25px;
-  color: var(--font-color);
+  color: var(--font-color-second);
   font-family: "Bebas Neue", cursive;
-  font-size: 16px;
+  font-size: 30px;
   height: 50px;
+  outline: none;
   padding: 0px 20px;
   width: 70%;
 }
