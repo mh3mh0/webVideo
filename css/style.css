@@ -20,7 +20,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /*border: rgb(0, 0, 255) 1px solid;*/
+}
+::-webkit-input-placeholder {
+  color: var(--font-color);
+  font-family: "Open Sans", sans-serif;
 }
 
 html {
@@ -48,21 +51,19 @@ a {
   transition: 0.3s ease all;
   font-size: 1.12em;
 }
-
-/*?------------ header--------------*/
+/*----------- header------------*/
 /* section */
 main {
   min-height: 100vh;
 
   place-items: center;
 }
-
 .nav-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  /* border: yellow 1px solid;*/
+  outline: 1px solid yellow;
 }
 .nav-header h1 {
   font-size: 5em;
@@ -70,7 +71,7 @@ main {
   font-weight: normal;
   color: var(--logo);
   text-shadow: var(--text-shadow);
-  /* border: yellow 1px solid;*/
+  outline: 1px solid yellow;
 }
 .nav-toggle {
   font-size: 3rem;
@@ -80,71 +81,40 @@ main {
   transition: var(--transition);
   cursor: pointer;
   outline: none;
-  /* border: yellow 1px solid;*/
+  outline: 1px solid yellow;
 }
 .nav-toggle:hover {
   color: var(--font-color);
   transform: rotate(90deg);
-  /* border: yellow 1px solid;*/
+  outline: 1px solid yellow;
 }
-
 /*?----------------links---------*/
 .links a {
   color: var(--font-color-second);
-  font-size: 1.5em;
+  font-size: 2.2em;
   text-transform: capitalize;
   letter-spacing: var(--spacing);
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   transition: var(--transition);
   text-shadow: var(--text-shadow);
-  /* border: yellow 1px solid;*/
+  outline: 1px solid yellow;
 }
 .links a:hover {
   color: var(--font-color);
   padding-left: 1.5rem;
-  /* border: yellow 1px solid;*/
+  outline: 1px solid yellow;
 }
 .links {
   height: 0;
   overflow: hidden;
   transition: var(--transition);
-  /* border: yellow 1px solid;*/
+  outline: 1px solid yellow;
 }
 .show-links {
   height: 15rem;
-  /* border: yellow 1px solid;*/
+  outline: 1px solid yellow;
 }
-
-@media screen and (min-width: 800px) {
-  .nav-center {
-    max-width: 1170px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-  .nav-header {
-    padding: 0;
-  }
-  .nav-toggle {
-    display: none;
-  }
-  .links {
-    height: auto;
-    display: flex;
-  }
-  .links a {
-    padding: 0;
-    margin: 0 0.5rem;
-  }
-  .links a:hover {
-    padding: 0;
-    background: transparent;
-  }
-}
-
 /*? ---- ---- ---- ---- principal-movie ---- ---- ---- ---- */
 main {
   padding-bottom: 1em;
@@ -154,7 +124,7 @@ main {
   margin-bottom: 3.12em;
   display: flex;
   align-items: flex-end;
-  min-height: 40em;
+  min-height: 50em;
   background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
     url(../imgs/backdrop.jpg);
   background-position: center center;
@@ -162,7 +132,7 @@ main {
   color: var(--font-color);
   font-size: 100%;
   text-shadow: var(--text-shadow);
-  border: yellow 1px solid;
+  outline: 1px solid yellow;
 }
 .main-description--container {
   margin: 0em 1em 1em;
@@ -183,12 +153,10 @@ main {
 }
 
 .video video {
-  margin: 1em;
-  height: 150px;
+  height: 165px;
 }
 /*? ---- ---- ---- ---- Podcast ---- ---- ---- ---- */
 .section {
-  margin-bottom: 0.5em;
   display: flex;
   align-items: flex-end;
   min-height: 10em;
@@ -216,7 +184,7 @@ main {
   justify-content: space-between;
   align-items: center;
 
-  /* border: yellow 1px solid;*/
+  /* outline: 1;*/
 }
 .container-title-controls .pointmark {
   box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.8);
@@ -238,7 +206,7 @@ main {
 /*? ---- ---- ---- ---- Main container and arrows ---- ---- ---- ---- */
 .recommended-movies {
   padding: 1em;
-  /* border: yellow 1px solid;*/
+  outline: 1px solid yellow;
 }
 
 .recommended-movies .container {
@@ -284,7 +252,6 @@ main {
   border-radius: 6px;
   overflow: hidden;
   scroll-behavior: smooth;
-  /* border: yellow 1px solid;*/
 }
 .carrousel-container .carrousel {
   display: flex;
@@ -336,13 +303,11 @@ main {
 
 /*? ---- ---- ---- ---- Form1-movie ---- ---- ---- ---- */
 
-.form__container form {
-  display: grid;
-  grid-template-rows: 80px 80px 80px 80px;
-  gap: 0.5em;
-  font-size: 100%;
+.form__container {
   margin: 0em 1em 1em;
-  border: yellow 1px solid;
+  gap: 1em;
+  font-size: 100%;
+  outline: 1px solid yellow;
 }
 .form__container h2 {
   font-size: 5em;
@@ -350,9 +315,10 @@ main {
   font-weight: normal;
   color: var(--logo);
   text-shadow: var(--text-shadow);
-  /* border: yellow 1px solid;*/
+  outline: 1px solid yellow;
 }
-label {
+label,
+input {
   display: inline-block;
   width: 100px;
   margin: 0.1em;
@@ -360,41 +326,36 @@ label {
   font-size: 2em;
   text-shadow: var(--text-shadow);
 }
-.form .button:hover {
+.form__container--group input {
+  border-radius: 15px;
+  width: 70%;
+
+  background-color: transparent;
+  border-bottom: 2px solid var(--logo);
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  font-family: "Muli", sans-serif;
+  font-size: 2em;
+  height: 50px;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 0px 20px;
+}
+.recording:hover {
   background: var(--font-color);
   color: #000;
 }
 .form__container--button i {
   margin-right: 1.25em;
 }
-.form__container--group input {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid var(--font-color-second);
-  border-radius: 25px;
-  color: var(--font-color-second);
-  font-family: "Bebas Neue", cursive;
-  font-size: 30px;
-  height: 50px;
-  outline: none;
-  padding: 0px 20px;
-  width: 70%;
-}
-
 /*? ---- ---- ---- ---- DataArea---- ---- ---- ---- */
 .section__data--container {
-  display: grid;
-  align-items: center;
-  min-height: 10em;
   margin: 0em 1em 1em;
+  gap: 1em;
   font-size: 100%;
-  padding: 15px 10px;
-  margin: 0em 1em 1em;
-  border: yellow 1px solid;
+  outline: 1px solid yellow;
 }
-.form__container {
-  margin: 0em 1em 1em;
-}
-
 .section__data--container h2 {
   font-size: 5em;
   font-family: "Bebas Neue", cursive;
@@ -402,7 +363,7 @@ label {
   color: var(--logo);
   text-shadow: var(--text-shadow);
 }
-.button:hover {
+.recovery:hover {
   background: var(--font-color);
   color: #000;
 }
@@ -416,5 +377,5 @@ footer {
   font-size: 2em;
   color: #fff;
   background-color: var(--logo);
-  /* border: yellow 1px solid;*/
+  outline: 1px solid yellow;
 }

@@ -2,9 +2,6 @@ header .logo {
   margin-bottom: 10px;
   font-size: 30px;
 }
-
-/*?----- Links ------*/
-
 .main-movie {
   font-size: 14px;
 }
@@ -23,20 +20,34 @@ header .logo {
   display: none;
 }
 /*?-------------- @media ---------*/
-@media screen and (max-width: 400px) {
-  /*.main-description--container,
-  .section__container,
-  .form__container,
-  .section__data--container*/
+@media screen and (max-width: 320px) {
   main {
     display: inline-grid;
     justify-content: center;
   }
-}
-.main-description--container,
-.form__container,
-.section__data--container {
-  display: grid;
-  grid-template-rows: 80px;
-  gap: 0.5em;
+  /*--------PRICIPAL MOVIE---------*/
+  .main-description--container {
+    display: grid;
+    grid-template-rows: 80px;
+    gap: 0.5em;
+  }
+
+  /*--------ADD MOVIE---------*/
+  .form__container--group input {
+    width: -webkit-fill-available;
+  }
+
+  .form__container--group .recording {
+    padding: 2em;
+    width: 90%;
+  }
+
+  /*---------LIST AREA:-------*/
+  .section__data--container {
+    width: -webkit-fill-available;
+  }
+  .section__data--container .recovery {
+    padding: 2em;
+    width: 90%;
+  }
 }

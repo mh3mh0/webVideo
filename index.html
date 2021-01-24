@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/tablet.css" media="(max-width: 800px)" />
+    <link rel="stylesheet" href="./css/max800px.css" media="(max-width: 800px)" />
+    <link rel="stylesheet" href="./css/min800px.css" media="(min-width: 800px)" />
 </head>
 
 <body>
@@ -27,10 +28,9 @@
             </div>
             <!-- links -->
             <ul class="links">
-                <li><a href="#" class="link">Start</a></li>
-                <li><a href="#carrousel" class="link">Movies</a></li>
-                <li><a href="#" class="link">New Movies</a></li>
-                <li><a href="#form" class="link">List</a></li>
+                <li><a href="#list" class="link">New and Recommends</a></li>
+                <li><a href="#radio" class="link">Podcast</a></li>
+                <li><a href="#form" class="link">Growing List</a></li>
             </ul>
         </div>
     </nav>
@@ -67,7 +67,7 @@
             </article>
         </section>
 
-        <section class="section">
+        <section id="radio" class="section">
             <div class="section__container">
                 <h3 class="section__title">Podcast:</h3>
                 <div class="section__container--player">
@@ -85,7 +85,7 @@
                     <div class="pointmark"></div>
                 </div>
 
-                <div id="carrousel" class="principal-container">
+                <div class="principal-container">
                     <button role="button" id="leftArrow" class="left-arrow">
                         <i class="fas fa-angle-left"></i>
                     </button>
@@ -251,21 +251,21 @@
             <form class="form__container--group">
                 <div class="group1">
                     <label>Title</label>
-                    <input type="text" name="title" pattern="[A-Za-z]" placeholder="Enter title" />
+                    <input class="input" type="text" name="title" placeholder="Enter title..." />
                 </div>
 
                 <div class="group2">
                     <label>Genre</label>
-                    <input type="text" name="genre" pattern="[A-Za-z]" placeholder="Enter genre" />
+                    <input class="input" type="text" name="genre" placeholder="Enter genre..." />
                 </div>
 
                 <div class="group3">
                     <label>Year</label>
-                    <input type="text" name="year" maxlength="4" pattern="[0-9\-]+" placeholder="Enter year" />
+                    <input class="input" type="text" name="year" maxlength="4" placeholder="Enter year..." />
                 </div>
 
                 <div class="form__container--button">
-                    <button id="recording" class="button buttonGlobal" value="submit">
+                    <button id="recording" class="recording buttonGlobal" value="submit">
                         <i class="fab fa-avianex"></i>SEND
                     </button>
                 </div>
@@ -278,7 +278,7 @@
                 <div id="dataShown"></div>
 
                 <div class="section__data--button">
-                    <button id="recovery" class="button buttonGlobal" value="dataRecovery">
+                    <button id="recovery" class="recovery buttonGlobal" value="dataRecovery">
                         <i class="fas fa-list-ul"></i>LIST
                     </button>
                 </div>
