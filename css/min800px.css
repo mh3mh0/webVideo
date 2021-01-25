@@ -24,3 +24,10 @@
   padding: 0;
   background: transparent;
 }
+.dataShown h2 {
+  font-size: 5em;
+  font-family: "Bebas Neue", cursive;
+  font-weight: normal;
+  color: var(--logo);
+  text-shadow: var(--text-shadow);
+}

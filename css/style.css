@@ -362,6 +362,19 @@ input {
   font-weight: normal;
   color: var(--logo);
   text-shadow: var(--text-shadow);
+  outline: 1px solid yellow;
+}
+.section__data--container {
+  position: relative;
+  display: inline-block;
+
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: var(--font-color);
+  outline: 1px solid yellow;
+}
+#dataShown {
+  font-size: 2em;
+  font-family: "Open Sans", sans-serif;
 }
 .recovery:hover {
   background: var(--font-color);
@@ -372,7 +385,7 @@ input {
 }
 /*? ---- ---- ---- ---- Footer---- ---- ---- ---- */
 footer {
-  position: 100%;
+  width: 100%;
   text-align: center;
   font-size: 2em;
   color: #fff;
