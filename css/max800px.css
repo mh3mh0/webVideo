@@ -5,6 +5,10 @@ header .logo {
 .main-movie {
   font-size: 14px;
 }
+.resume__text {
+  margin-bottom: 1em;
+  font-size: medium;
+}
 /*?------------ Carrousel -------*/
 .principal-container .carrousel-container {
   overflow: visible;

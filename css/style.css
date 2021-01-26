@@ -121,13 +121,12 @@ main {
 }
 
 .main-movie {
-  margin-bottom: 3.12em;
   display: flex;
   align-items: flex-end;
   min-height: 50em;
   background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
     url(../imgs/backdrop.jpg);
-  background-position: center center;
+  background-position: center, center;
   background-size: cover;
   color: var(--font-color);
   font-size: 100%;
@@ -135,14 +134,17 @@ main {
   outline: 1px solid yellow;
 }
 .main-description--container {
-  margin: 0em 1em 1em;
+  margin: 3em;
 }
 .main-description--container--title {
   font-size: 3.12em;
   margin: 0.4em;
 }
 .resume__text {
+  margin-bottom: 1em;
   font-size: 1.5em;
+  font-family: "Open Sans";
+  font-size: 2em;
 }
 .main-movie .button:hover {
   background: var(--font-color);
@@ -153,6 +155,7 @@ main {
 }
 
 .video video {
+  margin-bottom: 2em;
   height: 165px;
 }
 /*? ---- ---- ---- ---- Podcast ---- ---- ---- ---- */
