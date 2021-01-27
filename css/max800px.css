@@ -30,17 +30,11 @@ header .logo {
     justify-content: center;
   }
   aside > p {
-    margin: 10px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 0.31em;
-    padding: 5px;
     transition: 0.3s ease all;
   }
-  .section {
-    display: inline-grid;
-    justify-items: center;
-    padding-bottom: 202px;
-  }
+
   /*--------PRICIPAL MOVIE---------*/
   .main-description--container {
     display: grid;
@@ -48,7 +42,17 @@ header .logo {
     gap: 0.5em;
   }
   /*--------------ASIDE---------------*/
-
+  iframe {
+    width: 100%;
+    height: 180px;
+    border-color: white;
+  }
+  .section {
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   /*--------ADD MOVIE---------*/
   .form__container--group input {
     width: -webkit-fill-available;
