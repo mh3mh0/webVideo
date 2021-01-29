@@ -65,7 +65,7 @@ a {
 }
 .nav-header h1 {
   font-size: 5em;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue", sans-serif;
   font-weight: normal;
   color: var(--logo);
   text-shadow: var(--text-shadow);
@@ -333,6 +333,7 @@ aside > p {
   outline: 1px solid yellow;
 }
 .form__container {
+  padding: 2em 28em 0em 2em;
   margin: 0em 1em 1em;
   gap: 1em;
   font-size: 100%;
@@ -340,7 +341,7 @@ aside > p {
 }
 .form__container h2 {
   font-size: 5em;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue", sans-serif;
   font-weight: normal;
   color: var(--logo);
   text-shadow: var(--text-shadow);
@@ -378,31 +379,36 @@ input {
   margin-right: 1.25em;
 }
 /*? ---- ---- ---- ---- DataArea---- ---- ---- ---- */
-.section__data--container {
-  margin: 0em 1em 1em;
-  gap: 1em;
-  font-size: 100%;
-  outline: 1px solid yellow;
-}
+
 .section__data--container h2 {
   font-size: 5em;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue", sans-serif;
   font-weight: normal;
   color: var(--logo);
   text-shadow: var(--text-shadow);
   outline: 1px solid yellow;
 }
 .section__data--container {
-  position: relative;
-  display: inline-block;
-
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 2em 28em 0em 2em;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
   color: var(--font-color);
+  margin: 0em 1em 1em;
   outline: 1px solid yellow;
 }
+/*.section__data--container {
+  position: relative;
+  display: inline-block;
+  color: var(--font-color);
+  outline: 1px solid yellow;
+}*/
 #dataShown {
   font-size: 2em;
   font-family: "Open Sans", sans-serif;
+}
+.recovery {
+  margin-top: 20px;
 }
 .recovery:hover {
   background: var(--font-color);

@@ -25,7 +25,8 @@ function iniciar() {
   };
 }
 
-function agregarObjeto() {
+function agregarObjeto(event) {
+  event.preventDefault(); //to check¿?
   var title = document.getElementsByName("title")[0].value;
   var genre = document.getElementsByName("genre")[0].value;
   var year = document.getElementsByName("year")[0].value;
@@ -52,9 +53,9 @@ function dataRecovery() {
       dataShown.innerHTML +=
         "TITLE: " +
         cursor.value.title +
-        "    GENRE: " +
+        " --- GENRE: " +
         cursor.value.genre +
-        "    YEAR: " +
+        " - YEAR: " +
         cursor.value.year +
         "<br>";
       cursor.continue();
