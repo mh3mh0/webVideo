@@ -54,6 +54,9 @@ header .logo {
     align-items: center;
   }
   /*--------ADD MOVIE---------*/
+  .form__container {
+    padding: 0;
+  }
   .form__container--group input {
     width: -webkit-fill-available;
   }
@@ -65,9 +68,15 @@ header .logo {
 
   /*---------LIST AREA:-------*/
   .section__data--container {
+    padding: 0;
+    justify-content: space-between;
+    color: var(--font-color);
+    margin: 0em 1em 1em;
+    outline: 1px solid yellow;
     width: -webkit-fill-available;
   }
   .section__data--container .recovery {
+    width: -webkit-fill-available;
     padding: 2em;
     width: 90%;
   }
