@@ -61,7 +61,6 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  outline: 1px solid yellow;
 }
 .nav-header h1 {
   font-size: 5em;
@@ -69,7 +68,6 @@ a {
   font-weight: normal;
   color: var(--logo);
   text-shadow: var(--text-shadow);
-  outline: 1px solid yellow;
 }
 .nav-toggle {
   font-size: 3rem;
@@ -79,13 +77,10 @@ a {
   border-color: transparent;
   transition: var(--transition);
   cursor: pointer;
-  outline: none;
-  outline: 1px solid yellow;
 }
 .nav-toggle:hover {
   color: var(--font-color);
   transform: rotate(90deg);
-  outline: 1px solid yellow;
 }
 /*?----------------links---------*/
 .links a {
@@ -97,22 +92,18 @@ a {
   padding: 1rem 1rem;
   transition: var(--transition);
   text-shadow: var(--text-shadow);
-  outline: 1px solid yellow;
 }
 .links a:hover {
   color: var(--font-color);
   padding-left: 1.5rem;
-  outline: 1px solid yellow;
 }
 .links {
   height: 0;
   overflow: hidden;
   transition: var(--transition);
-  outline: 1px solid yellow;
 }
 .show-links {
   height: 15rem;
-  outline: 1px solid yellow;
 }
 /*? ---- ---- ---- ---- principal-movie ---- ---- ---- ---- */
 main {
@@ -132,7 +123,6 @@ main {
   color: var(--font-color);
   font-size: 100%;
   text-shadow: var(--text-shadow);
-  outline: 1px solid yellow;
 }
 .main-description--container {
   margin: 3em;
@@ -143,7 +133,6 @@ main {
 }
 .resume__text {
   margin-bottom: 1em;
-  font-size: 1.5em;
   font-family: "Open Sans";
   font-size: 2em;
 }
@@ -161,43 +150,50 @@ main {
 }
 /*? ---- ---- ---- ---- Podcast ---- ---- ---- ---- */
 .section {
-  padding: 0px 58px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
   min-height: 10em;
   background: url(../imgs/conan.jpg);
   background-position: center center;
   background-size: cover;
   color: var(--font-color);
-  font-size: 3.12em;
   text-shadow: var(--text-shadow);
   outline: 1px solid yellow;
 }
 .section__title {
-  margin-bottom: 25px;
+  font-size: 3.12em;
+  margin-bottom: 10px;
+}
+.section__container {
+  margin: 3px;
 }
 .section__aside--container {
   width: 50%;
   height: 20%;
 }
-iframe {
-  width: 100%;
+.section__container--player iframe {
+  outline: 1px solid yellow;
+  width: 70%;
   height: 180px;
   box-shadow: 20px 14px 16px 5px rgba(0, 0, 0, 0.8);
 }
-aside {
+.section__aside--container aside {
   width: auto;
-  float: right;
+  padding: 1em;
+  outline: 1px solid yellow;
+  border-radius: 10px;
+  background-color: var(--color);
 }
 
-aside > p {
-  /*margin: 10px;*/
-  /*padding: 5px;*/
+.section__aside--container aside > p {
+  width: 100%;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0.31em;
   padding: 5px;
   transition: 0.3s ease all;
+  font-size: 2em;
 }
 
 /*? ---- ---- ---- ---- Title container and controls-pointmark ---- ---- ---- ---- */
@@ -333,7 +329,6 @@ aside > p {
   outline: 1px solid yellow;
 }
 .form__container {
-  padding: 2em 28em 0em 2em;
   margin: 0em 1em 1em;
   gap: 1em;
   font-size: 100%;
@@ -389,7 +384,6 @@ input {
   outline: 1px solid yellow;
 }
 .section__data--container {
-  padding: 2em 28em 0em 2em;
   margin: 0em 1em 1em;
   color: var(--font-color);
   margin: 0em 1em 1em;
