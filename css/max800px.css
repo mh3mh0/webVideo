@@ -94,4 +94,10 @@ iframe {
     padding: 2em;
     width: 90%;
   }
+  .dataShown {
+    table-layout: auto;
+    width: 100%;
+    font-size: 1em;
+    font-family: "Open Sans", sans-serif;
+  }
 }

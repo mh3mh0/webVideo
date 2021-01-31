@@ -395,7 +395,9 @@ input {
   color: var(--font-color);
   outline: 1px solid yellow;
 }*/
-#dataShown {
+.dataShown {
+  table-layout: auto;
+  width: 100%;
   font-size: 2em;
   font-family: "Open Sans", sans-serif;
 }
@@ -409,6 +411,7 @@ input {
 .section__data--button i {
   margin-right: 1.25em;
 }
+
 /*? ---- ---- ---- ---- Footer---- ---- ---- ---- */
 footer {
   width: 100%;
