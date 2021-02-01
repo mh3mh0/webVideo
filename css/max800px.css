@@ -56,16 +56,10 @@ iframe {
     gap: 0.5em;
   }
   /*--------------ASIDE---------------*/
-  iframe {
-    width: 100%;
-    height: 180px;
-    border-color: white;
-  }
   .section {
-    padding: 0%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 80px;
+    gap: 0.5em;
   }
   /*--------ADD MOVIE---------*/
   .form__container {
