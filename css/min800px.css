@@ -22,6 +22,14 @@
   padding: 0;
   background: transparent;
 }
+
+.section__container--player iframe {
+  outline: 1px solid yellow;
+  width: 100vh;
+  height: 180px;
+  box-shadow: 20px 14px 16px 5px rgb(0 0 0 / 80%);
+}
+
 .dataShown h2 {
   font-size: 5em;
   font-family: "Bebas Neue", cursive;
