@@ -92,4 +92,22 @@ iframe {
     font-size: 1em;
     font-family: "Open Sans", sans-serif;
   }
+  /*? ---- ---- ---- ---- Button to UP---- ---- ---- ---- */
+  #button__up {
+    width: 40px;
+    height: 40px;
+    background: var(--logo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    position: fixed;
+    bottom: 37px;
+    right: 7px;
+    cursor: pointer;
+    border: 5px solid transparent;
+    transition: all 330ms ease;
+  }
 }

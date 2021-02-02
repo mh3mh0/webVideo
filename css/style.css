@@ -387,6 +387,29 @@ input {
   margin-right: 1.25em;
 }
 
+/*? ---- ---- ---- ---- Button to UP---- ---- ---- ---- */
+#button__up {
+  width: 40px;
+  height: 40px;
+  background: var(--logo);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  cursor: pointer;
+  border: 4px solid transparent;
+  transition: all 320ms ease;
+  //transform: scale(0);
+}
+#button__up:hover {
+  transform: scale(1.4);
+  border-color: rgba(0, 0, 0, 0.1);
+}
 /*? ---- ---- ---- ---- Footer---- ---- ---- ---- */
 footer {
   width: 100%;
