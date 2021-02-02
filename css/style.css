@@ -109,7 +109,6 @@ a {
 /*? ---- ---- ---- ---- principal-movie ---- ---- ---- ---- */
 main {
   min-height: 100vh;
-  padding-bottom: 1em;
   place-items: center;
 }
 
@@ -145,7 +144,7 @@ main {
   margin-right: 1.25em;
 }
 
-.video video {
+video {
   margin-bottom: 2em;
   height: 165px;
 }
@@ -165,7 +164,6 @@ main {
 }
 
 .section__container--player iframe {
-  outline: 1px solid yellow;
   width: 67vh;
   height: 145px;
   box-shadow: 20px 14px 16px 5px rgba(0, 0, 0, 0.8);
@@ -214,7 +212,6 @@ main {
 /*? ---- ---- ---- ---- Main container and arrows ---- ---- ---- ---- */
 .recommended-movies {
   padding: 1em;
-  outline: 1px solid yellow;
 }
 
 .recommended-movies .container {
@@ -310,14 +307,10 @@ main {
 }
 
 /*? ---- ---- ---- ---- Form1-movie ---- ---- ---- ---- */
-.form__container--dataInfo {
-  outline: 1px solid yellow;
-}
 .form__container {
   margin: 0em 1em 1em;
   gap: 1em;
   font-size: 100%;
-  outline: 1px solid yellow;
 }
 .form__container h2 {
   font-size: 5em;
@@ -325,7 +318,6 @@ main {
   font-weight: normal;
   color: var(--logo);
   text-shadow: var(--text-shadow);
-  outline: 1px solid yellow;
 }
 label,
 input {
@@ -366,13 +358,11 @@ input {
   font-weight: normal;
   color: var(--logo);
   text-shadow: var(--text-shadow);
-  outline: 1px solid yellow;
 }
 .section__data--container {
   margin: 0em 1em 1em;
   color: var(--font-color);
   margin: 0em 1em 1em;
-  outline: 1px solid yellow;
 }
 /*.section__data--container {
   position: relative;
@@ -404,5 +394,4 @@ footer {
   font-size: 2em;
   color: #fff;
   background-color: var(--logo);
-  outline: 1px solid yellow;
 }

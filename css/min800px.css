@@ -24,7 +24,6 @@
 }
 
 .section__container--player iframe {
-  outline: 1px solid yellow;
   width: 65vh;
   height: 180px;
   box-shadow: 20px 14px 16px 5px rgb(0 0 0 / 80%);

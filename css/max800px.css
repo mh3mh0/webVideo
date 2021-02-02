@@ -19,7 +19,6 @@ header .logo {
 iframe {
   width: 100%;
   height: 180px;
-  border-color: white;
 }
 
 /*?------------ Carrousel -------*/
@@ -80,7 +79,6 @@ iframe {
     justify-content: space-between;
     color: var(--font-color);
     margin: 0em 1em 1em;
-    outline: 1px solid yellow;
     width: -webkit-fill-available;
   }
   .section__data--container .recovery {
