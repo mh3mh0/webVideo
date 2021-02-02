@@ -86,11 +86,11 @@ a {
 /*?----------------links---------*/
 .links a {
   color: var(--font-color-second);
-  font-size: 2.2em;
+  font-size: 2em;
   text-transform: capitalize;
   letter-spacing: var(--spacing);
   display: block;
-  padding: 1rem 1rem;
+  padding: 6px 1rem;
   transition: var(--transition);
   text-shadow: var(--text-shadow);
 }
