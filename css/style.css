@@ -1,10 +1,3 @@
-/*
-1. Position
-2. Box model
-3. Tipo
-4. Visual
-5. Misselanius
-*/
 :root {
   /*colors*/
   --logo: #ff7070;
@@ -20,6 +13,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 ::-webkit-input-placeholder {
   color: var(--font-color);
@@ -33,86 +28,61 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  display: grid;
+  height: 100%;
 }
-ul {
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
-}
-
 .buttonGlobal {
   background: rgba(0, 0, 0, 0.5);
   border: none;
   border-radius: 0.31em;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.12em;
+  margin: 1em;
   outline: none;
   padding: 1em;
-  color: #fff;
-  margin: 1em;
-  cursor: pointer;
   transition: 0.3s ease all;
-  font-size: 1.12em;
 }
-/*----------- header------------*/
-/* section */
-.nav-header {
+/*------------------------------------- header---------------------------------*/
+.headContainer {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1em;
 }
-.nav-header h1 {
+.headerContainer__title {
+  color: var(--logo);
   font-size: 5em;
   font-family: "Bebas Neue", sans-serif;
   font-weight: normal;
-  color: var(--logo);
   text-shadow: var(--text-shadow);
 }
-.nav-toggle {
-  font-size: 3rem;
-  font-weight: 100;
-  color: var(--logo);
-  background: transparent;
-  border-color: transparent;
-  transition: var(--transition);
-  cursor: pointer;
-  outline: none;
+.headerContainer__toggle {
+  display: none;
 }
-.nav-toggle:hover {
-  color: var(--font-color);
-  transform: rotate(90deg);
+.navListContainer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
-/*?----------------links---------*/
-.links a {
+.navListContainer a {
   color: var(--font-color-second);
   font-size: 2em;
-  text-transform: capitalize;
   letter-spacing: var(--spacing);
-  display: block;
   padding: 6px 1rem;
-  transition: var(--transition);
   text-shadow: var(--text-shadow);
+  text-transform: capitalize;
+  transition: var(--transition);
 }
-.links a:hover {
+.navListContainer a:hover {
   color: var(--font-color);
   padding-left: 1.5rem;
 }
-.links {
-  height: 0;
-  overflow: hidden;
-  transition: var(--transition);
-}
-.show-links {
-  height: 15rem;
-}
-/*? ---- ---- ---- ---- principal-movie ---- ---- ---- ---- */
-main {
+/*---------------------------------------------------------------------------------*/
+/*------------------------------------------- main --------------------------------*/
+main .mainpage2 {
   min-height: 100vh;
   place-items: center;
 }
-
-.main-movie {
+.mainContainer {
   display: flex;
   align-items: flex-end;
   min-height: 50em;
@@ -124,78 +94,97 @@ main {
   font-size: 100%;
   text-shadow: var(--text-shadow);
 }
-.main-description--container {
+.mainContainer__movie {
   margin: 3em;
 }
-.main-description--container--title {
+.mainContainer__description--title {
   font-size: 3.12em;
   margin: 0.4em;
 }
-.resume__text {
-  margin-bottom: 1em;
+.mainContainer__description--resume--text {
+  display: none;
+  margin: 1em;
   font-family: "Open Sans";
   font-size: 2em;
+  transition: var(--transition);
 }
-.main-movie .button:hover {
+.mainContainer__description--button:hover {
   background: var(--font-color);
   color: #000;
 }
-.main-movie .button i {
+.mainContainer__description--button i {
   margin-right: 1.25em;
 }
-
-video {
-  margin-bottom: 2em;
+.mainContainer__videoContainer video {
+  margin: 1em;
   height: 165px;
 }
-/*? ---- ---- ---- ---- Podcast ---- ---- ---- ---- */
-.section {
-  padding: 1em;
+
+/*-------------------------------------------------------------------------------------*/
+/*? --------------------------------------------------------------- Podcast ---------------- */
+.podcastInfoContainer {
   background: url(../imgs/conan.jpg);
   background-position: center center;
   background-size: cover;
+  padding: 1em;
 }
-.section__title {
-  width: 100%;
+.podcastInfoContainer__title {
+  color: var(--font-color);
   font-size: 3.12em;
   margin-bottom: 10px;
-  color: var(--font-color);
   text-shadow: var(--text-shadow);
+  width: 100%;
 }
-
-.section__container--player iframe {
-  width: 67vh;
-  height: 145px;
-  box-shadow: 20px 14px 16px 5px rgba(0, 0, 0, 0.8);
+.podcastInfoContainer__area {
+  align-items: center;
+  display: inline-flex;
 }
-
-.section__aside--container aside > p {
+.sectionPlayer__player {
   margin: 1em;
+  padding: 1em;
+}
+.sectionPlayer__player iframe {
+  box-shadow: 20px 14px 16px 5px rgba(0, 0, 0, 0.8);
+  height: 14em;
+  width: 46vh;
+}
+.podcastInfoContainer__area--aside {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 1em;
-  padding: 1em;
-  font-size: 20px;
   color: var(--font-color);
+  font-size: 20px;
+  margin: 1em;
+  padding: 1em;
   text-shadow: var(--text-shadow);
 }
+@media (max-width: 700px) {
+  .podcastInfoContainer__area {
+    display: block;
+  }
+}
 
-/*? ---- ---- ---- ---- Title container and controls-pointmark ---- ---- ---- ---- */
-.recommended-movies p {
+/*---------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------- Recomended Area---------------------------------------- */
+
+/*---------------- Title container and controls-pointmark ----------------*/
+.list__recommendedContainer p {
   color: var(--font-color);
   font-size: 3em;
   text-shadow: var(--text-shadow);
 }
-.container-title-controls {
+.list__recommendedContainer--pointmarks {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.5em;
 
   /* outline: 1;*/
 }
-.container-title-controls .pointmark {
+.list__recommendedContainer--pointmarks .pointmark {
   box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.8);
 }
-.container-title-controls .pointmark button {
+.list__recommendedContainer--pointmarks .pointmark button {
   background: var(--font-color);
   height: 3px;
   width: 10px;
@@ -208,22 +197,26 @@ video {
 .pointmark button.active {
   background: red;
 }
-
-/*? ---- ---- ---- ---- Main container and arrows ---- ---- ---- ---- */
-.recommended-movies {
-  padding: 1em;
+@media (max-width: 500px) {
+  .list__recommendedContainer--pointmarks .pointmark {
+    display: none;
+  }
 }
 
-.recommended-movies .container {
+/*-------- Main container and arrows ---------*/
+.list__recommendedContainer {
+  padding: 3em;
+}
+.list__recommendedContainer .container {
   margin-bottom: 70px;
 }
-.principal-container {
+.list__recommendedContainer--carrousel {
   display: flex;
   align-items: center;
   position: relative;
 }
-.principal-container .left-arrow,
-.principal-container .right-arrow {
+.list__recommendedContainer--carrousel .left-arrow,
+.list__recommendedContainer--carrousel .right-arrow {
   position: absolute;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.3);
@@ -238,47 +231,48 @@ video {
   z-index: 500;
   transition: 0.2s ease all;
 }
-.principal-container .left-arrow:hover,
-.principal-container .right-arrow:hover {
+.list__recommendedContainer--carrousel .left-arrow:hover,
+.list__recommendedContainer--carrousel .right-arrow:hover {
   background: rgba(0, 0, 0, 0.9);
 }
-.principal-container .left-arrow {
+.list__recommendedContainer--carrousel .left-arrow {
   left: 0;
 }
-.principal-container .right-arrow {
+.list__recommendedContainer--carrousel .right-arrow {
   right: 0;
 }
 
-/*? ---- ---- ---- ---- Carrousel ---- ---- ---- ---- */
+/*---------------- Carrousel ----------------*/
 
-.carrousel-container {
+.carrouselContainer__items {
   width: 100%;
   padding: 20px 0;
   border-radius: 6px;
   overflow: hidden;
   scroll-behavior: smooth;
 }
-.carrousel-container .carrousel {
+.carrouselContainer__items .carrousel {
   display: flex;
   flex-wrap: nowrap;
 }
-.carrousel-container .carrousel .movie {
+.carrouselContainer__items .carrousel .movie {
   min-width: 20%;
   transition: 0.3s ease all;
   box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.56);
   cursor: pointer;
 }
-.carrousel-container .carrousel .movie:hover {
+.carrouselContainer__items .carrousel .movie:hover {
   transform: scale(1.2);
   transform-origin: center;
 }
-.carrousel-container .carrousel .movie img {
+.carrouselContainer__items .carrousel .movie img {
   border-radius: 6px;
   width: 100%;
   vertical-align: top;
 }
-/*?--------------- Cover carrousel-----------------------*/
-.carrousel-container .carrousel .movie .cover {
+
+/*--------------- Cover carrousel--- --------------*/
+.carrouselContainer__items .carrousel .movie .cover {
   border-radius: 6px;
   position: absolute;
   top: 0;
@@ -293,11 +287,11 @@ video {
   justify-content: center;
   align-items: center;
 }
-.carrousel-container .carrousel .movie:hover > .cover {
+.carrouselContainer__items .carrousel .movie:hover > .cover {
   opacity: 1;
   visibility: visible;
 }
-.carrousel-container .carrousel .movie .cover p {
+.carrouselContainer__items .carrousel .movie .cover p {
   margin: 0 auto;
   position: fixed;
   color: var(--font-color);
@@ -305,21 +299,21 @@ video {
   font-size: 1.1em;
   text-align: center;
 }
-
-/*? ---- ---- ---- ---- Form1-movie ---- ---- ---- ---- */
-.form__container {
+/*-------------------------------------------------------------------------------------------------- */
+/*----------------------------------------------- Form1-movie ----------------------------------------*/
+.formContainer {
   margin: 0em 1em 1em;
   gap: 1em;
   font-size: 100%;
 }
-.form__container h2 {
+.formContainer h2 {
   font-size: 5em;
   font-family: "Bebas Neue", sans-serif;
   font-weight: normal;
   color: var(--logo);
   text-shadow: var(--text-shadow);
 }
-label,
+.formContainer label,
 input {
   display: inline-block;
   width: 100px;
@@ -328,7 +322,7 @@ input {
   font-size: 2em;
   text-shadow: var(--text-shadow);
 }
-.form__container--group input {
+.formContainer__group input {
   border-radius: 15px;
   width: 70%;
   background-color: transparent;
@@ -347,34 +341,30 @@ input {
   background: var(--font-color);
   color: #000;
 }
-.form__container--button i {
+.formContainer__button i {
   margin-right: 1.25em;
 }
-/*? ---- ---- ---- ---- DataArea---- ---- ---- ---- */
+/*-------------------------------------------------------------------------------------------------- */
 
-.section__data--container h2 {
+/*----------------------------------------------- DataArea------------------------------------------ */
+
+.dataAreaContainer h2 {
   font-size: 5em;
   font-family: "Bebas Neue", sans-serif;
   font-weight: normal;
   color: var(--logo);
   text-shadow: var(--text-shadow);
 }
-.section__data--container {
+.dataAreaContainer {
   margin: 0em 1em 1em;
   color: var(--font-color);
   margin: 0em 1em 1em;
 }
-/*.section__data--container {
-  position: relative;
-  display: inline-block;
-  color: var(--font-color);
-  outline: 1px solid yellow;
-}*/
 .dataShown {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5em;
   table-layout: auto;
   width: 100%;
-  font-size: 2em;
-  font-family: "Open Sans", sans-serif;
 }
 .recovery {
   margin-top: 20px;
@@ -383,39 +373,243 @@ input {
   background: var(--font-color);
   color: #000;
 }
-.section__data--button i {
+.dataAreaContainer__button i {
   margin-right: 1.25em;
 }
+/*-------------------------------------------------------------------------------------------------- */
 
-/*? ---- ---- ---- ---- Button to UP---- ---- ---- ---- */
-#button__up {
-  width: 40px;
-  height: 40px;
-  background: var(--logo);
-  display: flex;
-  justify-content: center;
+/*-------------------------------------------- Button to Top---------------------------------------- */
+.buttonToTop {
   align-items: center;
-  color: white;
-  border-radius: 50%;
-  font-size: 20px;
-  position: fixed;
-  bottom: 40px;
-  right: 30px;
-  cursor: pointer;
+  background: var(--logo);
   border: 4px solid transparent;
+  border-radius: 50%;
+  bottom: 40px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 20px;
+  height: 40px;
+  justify-content: center;
+  position: fixed;
+  right: 30px;
   transition: all 320ms ease;
-  //transform: scale(0);
+  transform: scale(0);
+  width: 40px;
+  z-index: 501;
 }
-#button__up:hover {
-  transform: scale(1.4);
+.buttonToTop:hover {
   border-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.4);
+}
+/*-----------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------footer-----------------------------*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: var(--logo);
+  width: 100vw;
+  // display: block;
+  padding: 35px 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.footer__container {
+  display: block;
+  margin: 0 auto;
+  width: 1100px;
+  height: 100%;
+}
+.footer__container .logo__container {
+  width: 35%;
+  float: left;
+  height: 100%;
+  display: block;
 }
 
-/*? ---- ---- ---- ---- Footer---- ---- ---- ---- */
-footer {
+.footer__container .logo__container img {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 10em;
+  height: auto;
+}
+.footer__container .list__container1 {
+  width: calc(21.6666666667% - 20px);
+  margin-top: 22px;
+  margin-right: 10px;
+  float: left;
+  height: 100%;
+}
+.footer__container .list__container1:last-child {
+  margin-right: 0;
+}
+.footer__container .list__container1 h1 {
+  font-family: "arial";
+  font-size: 22px;
+  color: var(--font-color);
+  display: block;
   width: 100%;
-  text-align: center;
-  font-size: 2em;
-  color: #fff;
-  background-color: var(--logo);
+  margin-bottom: 20px;
+}
+.footer__container .list__container1 a {
+  font-family: "arial";
+  font-size: 18px;
+  color: var(--font-color);
+  display: block;
+  font-weight: 200;
+  width: 100%;
+  padding-bottom: 5px;
+}
+.footer__container .list__container1 li {
+  display: inline-block;
+  padding: 0 5px;
+  font-size: 20px;
+}
+
+/*-----------------------------------------------PAGE2-------------------------------------------------------*/
+.main__page2 {
+  min-height: 100vh;
+  place-items: center;
+}
+.sectionPage2 {
+  background: url(../imgs/conan.jpg);
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100vh;
+}
+.section__containerP2 {
+  display: flex;
+  align-items: flex-end;
+}
+
+.section__containerP2 .containerPosters {
+  display: grid;
+  grid-template-columns: repeat(1, 250px);
+  grid-gap: 5px;
+  justify-content: center;
+}
+.item {
+  border-radius: 5px;
+  padding: 10px;
+  background: #f2f2f2;
+}
+.item img {
+  max-width: 100%;
+}
+.containerVideo {
+  display: flex;
+}
+.video2 {
+  margin: 1em;
+  width: 50vw;
+}
+/*------------------------------------Media Query---------------------------------*/
+@media screen and (max-width: 800px) {
+  .headContainer {
+    flex-wrap: wrap;
+  }
+
+  .headerContainer {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .headerContainer__title {
+    color: var(--logo);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 5em;
+    font-weight: normal;
+    text-shadow: var(--text-shadow);
+  }
+  .headerContainer__toggle {
+    background: transparent;
+    border-color: transparent;
+    color: var(--logo);
+    cursor: pointer;
+    display: block;
+    font-size: 4rem;
+    font-weight: 100;
+    outline: none;
+    transition: var(--transition);
+  }
+  .headerContainer__toggle:hover {
+    color: var(--font-color);
+    transform: rotate(90deg);
+  }
+  /*----------------links---------*/
+  .navListContainer {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+  .navListContainer a {
+    color: var(--font-color-second);
+    font-size: 2em;
+    letter-spacing: var(--spacing);
+    padding: 6px 1rem;
+    text-shadow: var(--text-shadow);
+    text-transform: capitalize;
+    transition: var(--transition);
+  }
+  .navListContainer a:hover {
+    color: var(--font-color);
+    padding-left: 1.5rem;
+  }
+  .show-navListContainer {
+    display: block;
+    height: 11rem;
+  }
+} /*------------------------------------Media Query---------------------------------*/
+@media (max-width: 500px) {
+  .list__recommendedContainer .carrouselContainer__items {
+    overflow: visible;
+  }
+
+  .list__recommendedContainer--carrousel .carrouselContainer__items .carrousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .list__recommendedContainer--carrousel .left-arrow,
+  .list__recommendedContainer--carrousel .right-arrow {
+    display: none;
+  }
+
+  footer .footer__container {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .footer__container .logo__container,
+  .footer__container .list__container1 {
+    width: 100%;
+    margin: 1em;
+  }
+  .footer__container .logo__container img {
+    margin-left: -8px;
+  }
+} /*------------------------------------Media Query---------------------------------*/
+@media (max-width: 400px) {
+  .mainContainer__movie {
+    margin: 0;
+  }
+  .mainContainer__videoContainer video {
+    margin: 0;
+  }
+  .mainContainer__description {
+    display: inline-grid;
+    justify-content: center;
+    width: 100vw;
+  }
 }

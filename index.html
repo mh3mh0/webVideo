@@ -3,55 +3,57 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="webVideo" content="List of movies to watch" />
-    <title>webVideo</title>
+    <title>CleaningUp WebVideo</title>
+    <link rel="stylesheet" href="../css/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/max800px.css" media="(max-width: 800px)" />
-    <link rel="stylesheet" href="./css/min800px.css" media="(min-width: 800px)" />
 </head>
 
 <body>
-
-    <div class="nav-center">
-        <!-- nav header -->
-        <div class="nav-header">
-            <header>
-                <h1>webVideo</h1>
+    <!-- navLinks -->
+    <div class="headContainer">
+        <div class="headerContainer">
+            <header class="headerContainer__header">
+                <h1 class="headerContainer__title">webVideo</h1>
             </header>
 
-            <button class="nav-toggle">
+            <button class="headerContainer__toggle">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
         <!-- links -->
-        <ul class="links">
-            <li><a href="#list" class="link">New and Recommends</a></li>
-            <li><a href="#radio" class="link">Podcast</a></li>
-            <li><a href="#form" class="link">List</a></li>
-            <li><a href="./html/page2.html" class="link">Comments</a></li>
+        <ul class="navListContainer">
+            <li>
+                <a href="#list" class="navListContainer__link">New and Recommends</a>
+            </li>
+            <li><a href="#radio" class="navListContainer__link">Podcast</a></li>
+            <li><a href="#form" class="navListContainer__link">List</a></li>
+            <li>
+                <a href="../html/page2.html" class="navListContainer__link">Comments</a>
+            </li>
         </ul>
     </div>
 
-
+    <!-- videoDescriptionPodcast -->
     <main>
-        <section class="main-container">
-            <article class="main-movie">
-                <div class="main-description--container">
-                    <h3 class="main-description--container--title">Interestellar</h3>
+        <!-- main container-->
+        <section class="mainContainer">
+            <article class="mainContainer__movie">
+                <div class="mainContainer__description">
+                    <h3 class="mainContainer__description--title">Interestellar</h3>
 
-                    <div class="video">
-                        <video id="video1">
+                    <div class="mainContainer__videoContainer">
+                        <video id="video1" class="maincontainer__videoContainer--video1">
                             <source src="./videos/interstellar.mp4" type="video/mp4" />
                             Your browswer does not support videos on HTML5
                         </video>
                     </div>
 
-                    <div id="infoMovie" class="resume">
-                        <p class="resume__text">
+                    <div id="infoMovie" class="mainContainer__description--resume--text">
+                        <p class="">
                             The adventures of a group of explorers who make use of a newly
                             discovered wormhole to surpass the limitations on human space
                             travel and conquer the vast distances involved in an
@@ -59,76 +61,81 @@
                         </p>
                     </div>
 
-                    <button id="button" class="button buttonGlobal" onclick="playPause()">
+                    <button id="buttonPlay1" class="mainContainer__description--button buttonGlobal"
+                        onclick="playPause()">
                         <i class="far fa-play-circle"></i>PLAY
                     </button>
-                    <button id="show" class="button buttonGlobal" onclick="showHide_Info('infoMovie')">
+                    <button id="buttonShow" class="mainContainer__description--button buttonGlobal"
+                        onclick="showHide_Info('infoMovie')">
                         <i class="fas fa-info-circle"></i>INFO
                     </button>
                 </div>
             </article>
         </section>
 
-        <section id="radio" class="section">
-            <h3 class="section__title">Podcast:</h3>
-            <article class="section__main--container">
-                <div class="section__container">
-                    <div class="section__container--player">
-                        <iframe src="https://omny.fm/shows/conan-o-brien-needs-a-friend/anthony-anderson/embed">
+        <section id="radio" class="podcastInfoContainer">
+            <h3 class="podcastInfoContainer__title">Podcast:</h3>
+            <article class="podcastInfoContainer__area">
+                <div class="podcastInfoContainer__area--sectionPLayer">
+                    <div class="sectionPlayer__player">
+                        <iframe src="https://omny.fm/shows/conan-o-brien-needs-a-friend/anthony-anderson/embed"
+                            loading="lazy">
                         </iframe>
                     </div>
                 </div>
 
-                <div class="section__aside--container">
+                <div class="podcastInfoContainer__area--aside">
                     <aside>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, inventore expedita earum
-                            accusantium suscipit sunt magnam adipisci esse a illum repellendus architecto tempora,
-                            cumque
-                            qui nisi. Repellendus corrupti dolores sed.</p>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque,
+                            inventore expedita earum accusantium suscipit sunt magnam
+                            adipisci esse a illum repellendus architecto tempora, cumque qui
+                            nisi. Repellendus corrupti dolores sed.
+                        </p>
                     </aside>
                 </div>
             </article>
         </section>
-
+        <!-- List Carrousel-->
         <section id="list">
-            <article class="recommended-movies">
-                <div class="container-title-controls">
+            <article class="list__recommendedContainer">
+                <div class="list__recommendedContainer--pointmarks">
                     <p>Recomended Movies</p>
                     <div class="pointmark"></div>
                 </div>
 
-                <div class="principal-container">
+                <div class="list__recommendedContainer--carrousel">
                     <button id="leftArrow" class="left-arrow">
                         <i class="fas fa-angle-left"></i>
                     </button>
-                    <div class="carrousel-container">
+                    <div class="carrouselContainer__items">
                         <div class="carrousel">
                             <figure class="movie">
-                                <img src="./imgs/1.png" alt="Interestellar" />
+                                <img src="./imgs/1.png" loading="lazy" alt="Interestellar" />
                                 <figcaption class="cover">
                                     <p>Interestellar</p>
                                 </figcaption>
                             </figure>
                             <figure class="movie">
-                                <img src="./imgs/2.png" alt="The-martian" />
+                                <img src="./imgs/2.png" loading="lazy" alt="The-martian" />
                                 <figcaption class="cover">
                                     <p>The Martian</p>
                                 </figcaption>
                             </figure>
                             <figure class="movie">
-                                <img src="./imgs/3.png" alt="X-men" />
+                                <img src="./imgs/3.png" loading="lazy" alt="X-men" />
                                 <figcaption class="cover">
                                     <p>X-Men</p>
                                 </figcaption>
                             </figure>
                             <figure class="movie">
-                                <img src="./imgs/4.png" alt="Top-Gun" />
+                                <img src="./imgs/4.png" loading="lazy" alt="Top-Gun" />
                                 <figcaption class="cover">
                                     <p>Top Gun is a 1986 American action drama film</p>
                                 </figcaption>
                             </figure>
                             <figure class="movie">
-                                <img src="./imgs/5.png" alt="Tron" />
+                                <img src="./imgs/5.png" loading="lazy" alt="Tron" />
                                 <figcaption class="cover">
                                     <p>
                                         Tron is a 1982 American science fiction action-adventure
@@ -137,7 +144,7 @@
                                 </figcaption>
                             </figure>
                             <figure class="movie">
-                                <img src="./imgs/6.png" alt="Batman" />
+                                <img src="./imgs/6.png" loading="lazy" alt="Batman" />
                                 <figcaption class="cover">
                                     <p>
                                         Batman was created by artist Bob Kane and debuted on March
@@ -146,19 +153,19 @@
                                 </figcaption>
                             </figure>
                             <figure class="movie">
-                                <img src="./imgs/7.png" alt="Wolf" />
+                                <img src="./imgs/7.png" loading="lazy" alt="Wolf" />
                                 <figcaption class="cover">
                                     <p>Wolf is a 1994 American romantic horror film.</p>
                                 </figcaption>
                             </figure>
                             <figure class="movie">
-                                <img src="./imgs/8.png" alt="Greenland" />
+                                <img src="./imgs/8.png" loading="lazy" alt="Greenland" />
                                 <figcaption class="cover">
                                     <p>Greenland is a 2020 American disaster film.</p>
                                 </figcaption>
                             </figure>
                             <figure class="movie">
-                                <img src="./imgs/9.png" alt="Evangelion" />
+                                <img src="./imgs/9.png" loading="lazy" alt="Evangelion" />
                                 <figcaption class="cover">
                                     <p>
                                         The phrase Evangelion movie could refer to any one of
@@ -167,7 +174,7 @@
                                 </figcaption>
                             </figure>
                             <figure class="movie">
-                                <img src="./imgs/10.png" alt="Heavenquest" />
+                                <img src="./imgs/10.png" loading="lazy" alt="Heavenquest" />
                                 <figcaption class="cover">
                                     <p>
                                         Heavenquest is a 2020, reimagined fantasy universe
@@ -176,7 +183,7 @@
                                 </figcaption>
                             </figure>
                             <figure class="movie">
-                                <img src="./imgs/11.png" alt="Cops-and-robbers" />
+                                <img src="./imgs/11.png" loading="lazy" alt="Cops-and-robbers" />
                                 <figcaption class="cover">
                                     <p>
                                         Cops and Robbers. Insight from Jada Pinkett Smith and the
@@ -185,7 +192,7 @@
                                 </figcaption>
                             </figure>
                             <figure class="movie">
-                                <img src="./imgs/12.png" alt="Mortal" />
+                                <img src="./imgs/12.png" loading="lazy" alt="Mortal" />
                                 <figcaption class="cover">
                                     <p>
                                         Mortal is a 2020 English-language Norwegian fantasy action
@@ -194,7 +201,7 @@
                                 </figcaption>
                             </figure>
                             <figure class="movie">
-                                <img src="./imgs/13.png" alt="Jiu-jitsu" />
+                                <img src="./imgs/13.png" loading="lazy" alt="Jiu-jitsu" />
                                 <figcaption class="cover">
                                     <p>
                                         Jiu Jitsu is a 2020 American science fiction martial arts
@@ -209,13 +216,13 @@
                                 </figcaption>
                             </figure>
                             <figure class="movie">
-                                <img src="./imgs/15.png" alt="Mosters-of-man" />
+                                <img src="./imgs/15.png" loading="lazy" alt="Mosters-of-man" />
                                 <figcaption class="cover">
                                     <p>Monsters and Men is a 2018 American drama film.</p>
                                 </figcaption>
                             </figure>
                             <figure class="movie">
-                                <img src="./imgs/16.png" alt="Mosters-of-man" />
+                                <img src="./imgs/16.png" loading="lazy" alt="Mosters-of-man" />
                                 <figcaption class="cover">
                                     <p>
                                         The Midnight Sky is a 2020 American science fiction film.
@@ -229,13 +236,13 @@
                                 </figcaption>
                             </figure>
                             <figure class="movie">
-                                <img src="./imgs/18.png" alt="Honest-Thief" />
+                                <img src="./imgs/18.png" loading="lazy" alt="Honest-Thief" />
                                 <figcaption class="cover">
                                     <p>Honest Thief is a 2020 American action-thriller film.</p>
                                 </figcaption>
                             </figure>
                             <figure class="movie">
-                                <img src="./imgs/19.png" alt="Battlefield" />
+                                <img src="./imgs/19.png" loading="lazy" alt="Battlefield" />
                                 <figcaption class="cover">
                                     <p>
                                         Battleship is a 2012 American military science fiction
@@ -244,7 +251,7 @@
                                 </figcaption>
                             </figure>
                             <figure class="movie">
-                                <img src="./imgs/20.png" alt="Joker" />
+                                <img src="./imgs/20.png" loading="lazy" alt="Joker" />
                                 <figcaption class="cover">
                                     <p>Joker is a 2019 American psychological thriller film.</p>
                                 </figcaption>
@@ -258,9 +265,12 @@
             </article>
         </section>
 
-        <section id="form" class="form__container">
+
+
+        <!-- form-->
+        <section id="form" class="formContainer">
             <h2>Add Movie:</h2>
-            <form class="form__container--group">
+            <form class="formContainer__group">
                 <div class="group1">
                     <label>Title</label>
                     <input class="input" type="text" name="title" placeholder="Enter title..." />
@@ -276,26 +286,27 @@
                     <input class="input" type="text" name="year" maxlength="4" placeholder="Enter year..." />
                 </div>
 
-                <div class="form__container--button">
+                <div class="formContainer__button">
                     <button id="recording" class="recording buttonGlobal">
                         <i class="fab fa-avianex"></i>SEND
                     </button>
                 </div>
             </form>
         </section>
-
-        <section id="data-area" class="section__data--container">
+        <!-- data Area-->
+        <section id="data-area" class="dataAreaContainer">
             <div>
                 <h2>List Area:</h2>
             </div>
 
-            <div class="section__data--area">
+            <div class="dataAreaContainer__parking">
                 <div id="dataShown" class="dataShown">
                 </div>
             </div>
 
-            <div class="section__data--button">
-                <button id="recovery" class="recovery buttonGlobal" value="dataRecovery">
+            <div class="dataAreaContainer__button">
+                <button id="recovery" class="recovery buttonGlobal" value="dataRecovery"
+                    onclick="showHide_data('dataShown')">
                     <i class="fas fa-list-ul"></i> LIST
                 </button>
             </div>
@@ -303,19 +314,39 @@
     </main>
 
     <!--Button to Top-->
-    <div id="button__up" onclick="topFunction()">
+    <div id="buttonToTop" class="buttonToTop" onclick="topFunction()">
         <i class="fas fa-chevron-up"></i>
     </div>
-
+    <!-- footer -->
     <footer id="footer">
-        <div class="footer-container">
-            <p>CopyRights &copy;</p>
+        <div class="footer__container">
+            <div class="logo__container">
+                <img src="./imgs/logo1.png" alt="logo web">
+            </div>
+            <div class="list__container1">
+                <h1>Need help¿?</h1>
+                <a href="#">Terms &amp; Condition</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <div class="list__container1">
+                <h1>More</h1>
+                <a href="#">Donate</a>
+                <a href="#">Impact Reports</a>
+            </div>
+
+            <div class="list__container1">
+                <h1>Follow Us</h1>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </div>
         </div>
     </footer>
+
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/indexedDB.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
