@@ -24,16 +24,16 @@ function showHide_Info(buttonShow) {
   if (document.getElementById) {
     var el = document.getElementById(buttonShow);
     /*el.style.display = (el.style.display == 'none') ? 'block' : 'none';*/
-    if (el.style.display == "none") {
-      el.style.display = "block";
-    } else {
+    if (el.style.display == "block") {
       el.style.display = "none";
+    } else {
+      el.style.display = "block";
     }
   }
 }
-window.onload = function () {
-  showHide_Info("infoMovie");
-};
+// window.onload = function () {
+//   showHide_Info("infoMovie");
+// };
 
 //?------------------------------ Recommended Area -----------------------------------*/
 //?------------------------- Carrousel-arrows --------------------------

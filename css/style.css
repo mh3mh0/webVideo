@@ -411,7 +411,7 @@ footer {
   padding: 1em;
   background-color: var(--logo);
   width: 100vw;
-  // display: block;
+  /*display: block;*/
   padding: 35px 0;
   overflow: hidden;
   box-sizing: border-box;
