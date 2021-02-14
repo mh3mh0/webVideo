@@ -492,19 +492,15 @@ footer {
 .section__containerP2 .containerPosters {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 8px;
+  grid-gap: 24px;
   justify-content: center;
-}
-.item,
-.video2 {
-  border-radius: 5px;
-  padding: 10px;
-  background: #f2f2f2;
 }
 .item img {
   object-fit: cover;
-  width: 38vw;
+  width: 80vw;
   height: 100px;
+  border-radius: 8px;
+  //vertical-align: top;
 }
 .containerVideo {
   display: flex;
@@ -513,6 +509,35 @@ footer {
   object-fit: cover;
   width: 40vw;
   height: 12em;
+}
+
+/*----------------------------------------------PAGE2.2------------------------------------*/
+.containerPosters {
+  width: 100%;
+  padding: 20px 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.carrouselContainer__items .item {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.containerPosters .item img {
+  min-width: 20%;
+  transition: 1s ease all;
+  box-shadow: 12px 20px 10px rgba(0, 0, 0, 0.56);
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 10px;
+  background: #f2f2f2;
+}
+.containerPosters .item img:hover {
+  border-radius: 6px;
+  //transform: scale(1);
+  transform-origin: center;
+  width: 200px;
+  height: 200px;
 }
 /*------------------------------------Media Query---------------------------------*/
 @media screen and (max-width: 800px) {

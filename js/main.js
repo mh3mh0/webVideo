@@ -257,4 +257,6 @@ function topFunction() {
 
 // queue.addEventListener('mouseleave', () => {
 //     movies.forEach(movie => movie.classList.remove('hover'));
-// })*/
+// })
+
+// //? ---- ---- ---- ---- Hover ---- ---- ---- ----
