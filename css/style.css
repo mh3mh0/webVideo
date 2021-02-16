@@ -257,7 +257,7 @@ main .mainpage2 {
 }
 .carrouselContainer__items .carrousel .movie {
   min-width: 20%;
-  transition: 0.3s ease all;
+  transition: 1s ease all;
   box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.56);
   cursor: pointer;
 }
@@ -493,22 +493,22 @@ footer {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 24px;
-  justify-content: center;
 }
-.item img {
+.containerPosters .item img {
   object-fit: cover;
   width: 80vw;
   height: 100px;
+  transition: 2s linear;
+  box-shadow: 12px 20px 10px rgba(0, 0, 0, 0.56);
+  cursor: pointer;
   border-radius: 8px;
-  //vertical-align: top;
+  padding: 6px;
+  background: #f2f2f2;
 }
-.containerVideo {
-  display: flex;
-}
-.video2 {
-  object-fit: cover;
-  width: 40vw;
-  height: 12em;
+.containerPosters .item img:hover {
+  width: 12em;
+  height: 18em;
+  min-width: 5%;
 }
 
 /*----------------------------------------------PAGE2.2------------------------------------*/
@@ -519,26 +519,21 @@ footer {
   overflow: hidden;
   scroll-behavior: smooth;
 }
-.carrouselContainer__items .item {
+.containerPosters p {
+  //display: none;
+  padding: 2px;
+  margin: 2px;
+  font-family: "Open Sans";
+  font-size: 2em;
+}
+.containerPosters .level-1,
+.level-2,
+.level-3 {
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: row;
+  column-gap: 48px;
 }
-.containerPosters .item img {
-  min-width: 20%;
-  transition: 1s ease all;
-  box-shadow: 12px 20px 10px rgba(0, 0, 0, 0.56);
-  cursor: pointer;
-  border-radius: 8px;
-  padding: 10px;
-  background: #f2f2f2;
-}
-.containerPosters .item img:hover {
-  border-radius: 6px;
-  //transform: scale(1);
-  transform-origin: center;
-  width: 200px;
-  height: 200px;
-}
+
 /*------------------------------------Media Query---------------------------------*/
 @media screen and (max-width: 800px) {
   .headContainer {
