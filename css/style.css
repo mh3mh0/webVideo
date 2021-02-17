@@ -494,7 +494,9 @@ footer {
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 24px;
 }
-.containerPosters .item img {
+
+.item img {
+  position: relative;
   object-fit: cover;
   width: 80vw;
   height: 100px;
@@ -504,21 +506,15 @@ footer {
   border-radius: 8px;
   padding: 6px;
   background: #f2f2f2;
+  // pointer-events: auto;
 }
-.containerPosters .item img:hover {
+.item img:hover {
   width: 12em;
   height: 18em;
   min-width: 5%;
 }
 
 /*----------------------------------------------PAGE2.2------------------------------------*/
-.containerPosters {
-  width: 100%;
-  padding: 20px 20px;
-  border-radius: 6px;
-  overflow: hidden;
-  scroll-behavior: smooth;
-}
 .containerPosters p {
   //display: none;
   padding: 2px;
