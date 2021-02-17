@@ -482,11 +482,11 @@ footer {
   /*justify-content: center;*/
   height: 100vh;
 }
-.section__containerP2 {
+.main__page2 .section__containerP2 {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
-  padding: 0 0 10em 8em;
+  padding: 5em 4em;
 }
 
 .section__containerP2 .containerPosters {
@@ -621,6 +621,42 @@ footer {
   }
   .footer__container .logo__container img {
     margin-left: -8px;
+  }
+  /*----------------------------------------------PAGE2.2 media queries------------------------------------*/
+  .section__containerP2 {
+    margin: 14% 0;
+    display: block;
+    padding: 1em;
+  }
+  .item img {
+    //position: relative;
+    object-fit: cover;
+    width: 80vw;
+    height: 100px;
+    transition: 2s ease-in-out;
+    box-shadow: 12px 20px 10px rgba(0, 0, 0, 0.56);
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 6px;
+    background: #f2f2f2;
+    pointer-events: auto;
+    margin-top: 0;
+  }
+  .item img:hover {
+    position: relative;
+    width: 30vw;
+    height: 30vh;
+  }
+  .containerPosters .level-1,
+  .level-2,
+  .level-3 {
+    display: flex;
+    flex-direction: column;
+    column-gap: 8px;
+  }
+  .item p {
+    font-family: "Open Sans";
+    font-size: 1.5em;
   }
 } /*------------------------------------Media Query---------------------------------*/
 @media (max-width: 400px) {
