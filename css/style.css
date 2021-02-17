@@ -500,18 +500,19 @@ footer {
   object-fit: cover;
   width: 80vw;
   height: 100px;
-  transition: 2s linear;
+  transition: 2s ease-in-out;
   box-shadow: 12px 20px 10px rgba(0, 0, 0, 0.56);
   cursor: pointer;
   border-radius: 8px;
   padding: 6px;
   background: #f2f2f2;
-  // pointer-events: auto;
+  pointer-events: auto;
+  margin-top: 15px;
 }
 .item img:hover {
-  width: 12em;
-  height: 18em;
-  min-width: 5%;
+  position: relative;
+  width: 16%;
+  height: 40vh;
 }
 
 /*----------------------------------------------PAGE2.2------------------------------------*/
