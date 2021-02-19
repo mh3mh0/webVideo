@@ -510,12 +510,10 @@ footer {
   margin-top: 15px;
 }
 .item img:hover {
-  -o-object-fit: none;
   position: relative;
   width: 18%;
   height: 40vh;
 }
-
 /*----------------------------------------------PAGE2.2------------------------------------*/
 .text__leve1,
 .text__leve2,
