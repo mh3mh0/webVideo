@@ -124,7 +124,10 @@ function agregarObjeto(event) {
     .objectStore("movies");
 
   customerObjectStore.add(movies);
-  alert("Movie added into the list");
+  //alert("Movie added into the list");
+
+  swal("Great", "Movie added into the list", "success");
+
   document.getElementsByName("title")[0].value = "";
   document.getElementsByName("genre")[0].value = "";
   document.getElementsByName("year")[0].value = "";
