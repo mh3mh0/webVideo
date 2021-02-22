@@ -43,17 +43,6 @@ const movies = document.querySelectorAll(".movie");
 const leftArrow = document.getElementById("leftArrow");
 const rightArrow = document.getElementById("rightArrow");
 
-//? ------ Event Listener for rightArrow ----------
-rightArrow.addEventListener("click", () => {
-  queue.scrollLeft += queue.offsetWidth;
-
-  const indicatorActive = document.querySelector(".pointmark .active");
-  if (indicatorActive.nextSibling) {
-    indicatorActive.nextSibling.classList.add("active");
-    indicatorActive.classList.remove("active");
-  }
-});
-
 //? -------------------------- Event Listener for leftArrow -------------
 leftArrow.addEventListener("click", () => {
   queue.scrollLeft -= queue.offsetWidth;
@@ -64,7 +53,16 @@ leftArrow.addEventListener("click", () => {
     indicatorActive.classList.remove("active");
   }
 });
+//? ------ Event Listener for rightArrow ----------
+rightArrow.addEventListener("click", () => {
+  queue.scrollLeft += queue.offsetWidth;
 
+  const indicatorActive = document.querySelector(".pointmark .active");
+  if (indicatorActive.nextSibling) {
+    indicatorActive.nextSibling.classList.add("active");
+    indicatorActive.classList.remove("active");
+  }
+});
 //? ---------------------------------- Pages-carrousel -------------------
 const pageNumber = Math.ceil(movies.length / 5);
 for (let i = 0; i < pageNumber; i++) {
