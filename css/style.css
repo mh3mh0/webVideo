@@ -344,6 +344,10 @@ input {
 .formContainer__button i {
   margin-right: 1.25em;
 }
+/*.swal-modal {
+  background-color: rgba(255, 63, 213, 0.69);
+  border: 3px solid white;
+}*/
 /*-------------------------------------------------------------------------------------------------- */
 
 /*----------------------------------------------- DataArea------------------------------------------ */
@@ -470,7 +474,7 @@ footer {
 
 /*-----------------------------------------------PAGE2-------------------------------------------------------*/
 .main__page2 {
-  min-height: 100vh;
+  height: 100%;
   place-items: center;
 }
 .sectionPage2 {
@@ -480,6 +484,7 @@ footer {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  height: 100%;
 }
 .sectionPage2__section--containerP2 {
   margin: auto;
