@@ -22,18 +22,14 @@ window.playPause = function () {
 
 function showHide_Info(buttonShow) {
   if (document.getElementById) {
-    var el = document.getElementById(buttonShow);
-    /*el.style.display = (el.style.display == 'none') ? 'block' : 'none';*/
-    if (el.style.display == "block") {
-      el.style.display = "none";
+    let info = document.getElementById(buttonShow);
+    if (info.style.display == "block") {
+      info.style.display = "none";
     } else {
-      el.style.display = "block";
+      info.style.display = "block";
     }
   }
 }
-// window.onload = function () {
-//   showHide_Info("infoMovie");
-// };
 
 //?------------------------------ Recommended Area -----------------------------------*/
 //?------------------------- Carrousel-arrows --------------------------
@@ -87,33 +83,27 @@ for (let i = 0; i < pageNumber; i++) {
 
 var bd;
 
-function iniciar() {
-  var boton = document.getElementById("recording");
+function start() {
+  var button = document.getElementById("recording");
   var recovery = document.getElementById("recovery");
-  var deleteKey = document.getElementById("deleteKey");
-  var showKey = document.getElementById("showKey");
-  var deleteAll = document.getElementById("deleteAll");
 
-  /*showKey.addEventListener('click', recuperarClave, false);*/
-  boton.addEventListener("click", agregarObjeto, false);
+  button.addEventListener("click", addObject, false);
   recovery.addEventListener("click", dataRecovery, false);
-  /*deleteKey.addEventListener('click', borrarClave, false);*/
-  /*deleteAll.addEventListener('click', borrarTodo, false);*/
 
-  var solicitud = indexedDB.open("midb2", 6); // solicitando BS y nombre
+  var request = indexedDB.open("midb2", 6);
 
-  solicitud.onsuccess = function (e) {
+  request.onsuccess = function (e) {
     bd = e.target.result;
   };
 
-  solicitud.onupgradeneeded = function (e) {
+  request.onupgradeneeded = function (e) {
     bd = e.target.result;
     bd.createObjectStore("movies", { keyPath: "title" });
   };
 }
 
-function agregarObjeto(event) {
-  event.preventDefault(); //to check¿?
+function addObject(event) {
+  event.preventDefault();
   var title = document.getElementsByName("title")[0].value;
   var genre = document.getElementsByName("genre")[0].value;
   var year = document.getElementsByName("year")[0].value;
@@ -124,16 +114,13 @@ function agregarObjeto(event) {
     .objectStore("movies");
 
   customerObjectStore.add(movies);
-  //alert("Movie added into the list");
 
   swal("Great", "Movie added into the list", "success");
 
   document.getElementsByName("title")[0].value = "";
   document.getElementsByName("genre")[0].value = "";
   document.getElementsByName("year")[0].value = "";
-  /*if (document.getElementsByName("dataShownTable") != null) {
-    dataRecovery();
-  }*/
+
   return false;
 }
 
@@ -157,14 +144,6 @@ function dataRecovery() {
   cell1.innerHTML = "<h1>TITLE</h1>";
   cell2.innerHTML = "<h1>GENRE</h1>";
   cell3.innerHTML = "<h1>YEAR</h1>";
-  // var textoTitulo1 = document.createTextNode("TITLE");
-  // cell1.appendChild(textoTitulo1);
-
-  // var textoTitulo2 = document.createTextNode("GENRE");
-  // cell2.appendChild(textoTitulo2);
-
-  // var textoTitulo3 = document.createTextNode("YEAR");
-  // cell3.appendChild(textoTitulo3);
 
   var tblBody = document.createElement("tbody");
   tableData.setAttribute("border", "11");
@@ -173,23 +152,23 @@ function dataRecovery() {
   customerObjectStore.openCursor().onsuccess = function (event) {
     var cursor = event.target.result;
     if (cursor) {
-      var hilera = document.createElement("tr");
-      var celda1 = document.createElement("td");
-      var textoCelda1 = document.createTextNode(cursor.value.title);
-      celda1.appendChild(textoCelda1);
-      hilera.appendChild(celda1);
+      var row = document.createElement("tr");
+      var cell1 = document.createElement("td");
+      var textCell1 = document.createTextNode(cursor.value.title);
+      cell1.appendChild(textCell1);
+      row.appendChild(cell1);
 
-      var celda2 = document.createElement("td");
-      var textoCelda2 = document.createTextNode(cursor.value.genre);
-      celda2.appendChild(textoCelda2);
-      hilera.appendChild(celda2);
+      var cell2 = document.createElement("td");
+      var textCell2 = document.createTextNode(cursor.value.genre);
+      cell2.appendChild(textCell2);
+      row.appendChild(cell2);
 
-      var celda3 = document.createElement("td");
-      var textoCelda3 = document.createTextNode(cursor.value.year);
-      celda3.appendChild(textoCelda3);
-      hilera.appendChild(celda3);
+      var cell3 = document.createElement("td");
+      var textCell3 = document.createTextNode(cursor.value.year);
+      cell3.appendChild(textCell3);
+      row.appendChild(cell3);
 
-      tblBody.appendChild(hilera);
+      tblBody.appendChild(row);
       cursor.continue();
     } else {
     }
@@ -197,16 +176,15 @@ function dataRecovery() {
   return false;
 }
 
-window.addEventListener("load", iniciar, false);
+window.addEventListener("load", start, false);
 
 function showHide_data(recovery) {
   if (document.getElementById) {
-    var el = document.getElementById(recovery);
-    /*el.style.display = (el.style.display == 'none') ? 'block' : 'none';*/
-    if (el && el.style.display == "block") {
-      el.style.display = "none";
+    let board = document.getElementById(recovery);
+    if (board && board.style.display == "block") {
+      board.style.display = "none";
     } else {
-      el.style.display = "block";
+      board.style.display = "block";
     }
   }
 }
@@ -214,52 +192,3 @@ function showHide_data(recovery) {
 window.onload = function () {
   showHide_data("recovery");
 };
-
-// //?------------------------------------- Button to Top -----------------------------*/
-// mybutton = document.getElementById("buttonToTop");
-
-// mybutton.addEventListener("mouseover", function (event) {
-//   mybutton.style.transform = "scale(2)";
-// });
-// mybutton.addEventListener("mouseleave", function (event) {
-//   mybutton.style.transform = "scale(1)";
-// });
-
-// // When the user scrolls down 20px from the top of the document, show the button
-// window.onscroll = function () {
-//   scrollFunction();
-// };
-
-// function scrollFunction() {
-//   if (
-//     document.body.scrollTop > 100 ||
-//     document.documentElement.scrollTop > 100
-//   ) {
-//     mybutton.style.transform = "scale(1)";
-//   } else {
-//     mybutton.style.transform = "scale(0)";
-//   }
-// }
-
-// //When the user clicks on the button, scroll to the top of the document
-// function topFunction() {
-//   document.body.scrollTop = 0; // For Safari
-//   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-// }
-
-// //? ---- ---- ---- ---- Hover ---- ---- ---- ----
-// /*movies.forEach((movie) =>{
-//     movie.addEventListener('mouseenter', (e) => {
-//         const element = e.currentTarget;
-//         setTimeout(() =>{
-//             movies.forEach(movie => movie.classList.remove('hover'));
-//             element.classList.add('hover');
-//         }, 300);
-//     });
-// });
-
-// queue.addEventListener('mouseleave', () => {
-//     movies.forEach(movie => movie.classList.remove('hover'));
-// })
-
-// //? ---- ---- ---- ---- Hover ---- ---- ---- ----
