@@ -44,25 +44,27 @@ const leftArrow = document.getElementById("leftArrow");
 const rightArrow = document.getElementById("rightArrow");
 
 //? -------------------------- Event Listener for leftArrow -------------
-leftArrow.addEventListener("click", () => {
-  queue.scrollLeft -= queue.offsetWidth;
+leftArrow &&
+  leftArrow.addEventListener("click", () => {
+    queue.scrollLeft -= queue.offsetWidth;
 
-  const indicatorActive = document.querySelector(".pointmark .active");
-  if (indicatorActive.previousSibling) {
-    indicatorActive.previousSibling.classList.add("active");
-    indicatorActive.classList.remove("active");
-  }
-});
+    const indicatorActive = document.querySelector(".pointmark .active");
+    if (indicatorActive.previousSibling) {
+      indicatorActive.previousSibling.classList.add("active");
+      indicatorActive.classList.remove("active");
+    }
+  });
 //? ------ Event Listener for rightArrow ----------
-rightArrow.addEventListener("click", () => {
-  queue.scrollLeft += queue.offsetWidth;
+rightArrow &&
+  rightArrow.addEventListener("click", () => {
+    queue.scrollLeft += queue.offsetWidth;
 
-  const indicatorActive = document.querySelector(".pointmark .active");
-  if (indicatorActive.nextSibling) {
-    indicatorActive.nextSibling.classList.add("active");
-    indicatorActive.classList.remove("active");
-  }
-});
+    const indicatorActive = document.querySelector(".pointmark .active");
+    if (indicatorActive.nextSibling) {
+      indicatorActive.nextSibling.classList.add("active");
+      indicatorActive.classList.remove("active");
+    }
+  });
 //? ---------------------------------- Pages-carrousel -------------------
 const pageNumber = Math.ceil(movies.length / 5);
 for (let i = 0; i < pageNumber; i++) {
@@ -201,7 +203,7 @@ function showHide_data(recovery) {
   if (document.getElementById) {
     var el = document.getElementById(recovery);
     /*el.style.display = (el.style.display == 'none') ? 'block' : 'none';*/
-    if (el.style.display == "block") {
+    if (el && el.style.display == "block") {
       el.style.display = "none";
     } else {
       el.style.display = "block";
